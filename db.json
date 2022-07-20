@@ -1,4 +1,22 @@
 {
+  "loginData": [
+    {
+      "id": 1658303475944,
+      "fname": "Akshay",
+      "lname": "Kanherkar",
+      "email": "Akshaykanherkar7@gmail.com",
+      "mobile": "9730423294",
+      "password": "Akshay@973042"
+    },
+    {
+      "id": 1658303553550,
+      "fname": "Sonu",
+      "lname": "Deshmukh",
+      "email": "Sonu@gmail.com",
+      "mobile": "8600383066",
+      "password": "Sonu@860038"
+    }
+  ],
     "cars": [
         {
           "car-title": "",
@@ -691,5 +709,4 @@
           "extra-km": "Extra Kms @ ₹ 16/km"
         }
       ]
-  
 }
