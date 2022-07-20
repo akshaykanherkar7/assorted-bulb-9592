@@ -1,0 +1,244 @@
+/* payment page */
+.upiBox{
+    width:100%;
+     height: 50px;
+      /* border:1px solid red ; */
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      /* box-shadow: */
+      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      padding:15px 15px;
+}
+
+.upiDropDown{
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 10px 20px;
+    background-color: hsla(0,0%,94.1%,.53);
+    display: flex;
+    align-content: center;
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    height: 50px;
+    /* border:1px solid green; */
+     flex:1 ;
+     display:flex ;
+     justify-content:space-between; text-align:left
+
+    
+
+}
+.upiDropDownFirsChild{
+
+    display:flex; 
+     margin:0px 11px 0px 0px
+}
+
+
+/* // upimainbox */
+
+
+.upiMainBox{
+
+
+    width:40%; height: 600px; border:1px solid red; margin:auto
+}
+
+.upiMainBoxFirstchild{
+
+height:60px;
+background-color:#0EBABA;
+color:#FFFFFF;
+display:flex;
+justify-content:space-between
+
+}
+
+
+/* cont */
+.contan{
+    padding-top: 80px;
+    margin-bottom: 20px;
+    color: #333333;
+}
+.imglog{
+    width: 100px;
+    height: 100px;
+    border-radius: 4px;
+    display: block;
+    margin: -75px auto 10px;
+}
+.header{
+    background-color: #0EBABA;
+    /* background: #8bbb4b; */
+    color: #fff;
+    padding: 30px 0 24px;
+    border-radius: 2px;
+    position: relative;
+    text-shadow: 0 1px 3px rgb(0 0 0 / 20%);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+/* upi css */
+.contanUpi{
+    margin-bottom: 24px;
+    background-color: #fff;
+    margin-left: 8px;
+    margin-right: 8px;
+    border: 1px solid rgba(36,38,43,0.06);
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgb(61 64 72 / 6%);
+    padding: 16px 24px;
+}
+.contanUpiChildBox{
+    
+        background-color: #fff;
+        margin-top: 12px;
+        border-radius: 2px;
+        border: 1px solid rgba(36,38,43,0.06);
+        background-color: #f5f5f5 18px 25px no-repeat;
+        text-align: left;
+        white-space: nowrap;
+        padding: 14px 20px 14px 54px;
+        line-height: 22px;
+        position: relative;
+        /* text-align: center; */
+        color: #333;
+        font-size: 16px;
+    /* background-image: url(`data:image/svg+xml,%3Csvgheight${}width='20'x…roke='%23497B06'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E%0A`); */
+}
+
+.UpiPaymentspan{
+    text-align: left;
+    white-space: nowrap;
+    padding: 14px 20px 14px 54px;
+  
+    line-height: 17px;
+    margin: 4px 0;
+    display: block;
+    color: #777;
+
+    white-space: normal;
+    font-size: 16px;
+}
+
+.UpiPaymentP{
+
+    /* text-align: left; */
+    white-space: nowrap;
+    padding: 14px 20px 14px 54px;
+  
+    /* line-height: 17px; */
+    /* margin: 4px 0; */
+    display: block;
+    color: black;
+
+    white-space: normal;
+    font-size: 16px;
+    margin-bottom: -3%;
+}
+
+.inputUpi{
+    border: 0;
+    border-bottom: 1px solid #e6e6e6;
+    width: 100%;
+    outline: none;
+    /* padding: 10px 0 8px; */
+    font-size: 13px;
+    transition: 0.15s ease-in-out;
+    writing-mode: horizontal-tb !important;
+    white-space: nowrap;
+    padding: 14px 20px 14px 54px;
+  
+    /* line-height: 17px; */
+    /* margin: 4px 0; */
+    display: block;
+    color: black;
+
+    white-space: normal;
+
+    
+}
+.upipayButton{
+    background: #0EBABA;
+    transform: none;
+    opacity: 1;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    background-color: #DADADA;
+    width: 100%;
+   
+    border: 0;
+    color: #fff;
+    height: 60px;
+   
+    border-radius: 0 0 2px 2px;
+    font-size: 16px;
+    transition: 0.2s;
+    cursor: pointer;
+    text-transform: uppercase;
+    /* background: #8bbb4b; */
+    
+    margin-top: 4%;
+    font: 16px;
+
+}
+.span{
+    font-size: 13px;
+    letter-spacing: 1px;
+    line-height: 18px;
+    color: rgba(81,89,120,0.54);
+    text-transform: uppercase;
+}
+
+
+/* scanbox  */
+
+.scanheading{
+    background-color: #fff;
+    margin-left: 8px;
+    margin-right: 8px;
+    border: 1px solid rgba(36,38,43,0.06);
+    border-radius: 2px;
+    box-shadow: 0 2px 4px 0 rgb(61 64 72 / 6%);
+    padding: 16px 24px;
+}
+.scanBox{
+    background: #f5f5f5 18px 25px no-repeat;
+    text-align: left;
+    white-space: nowrap;
+    padding: 14px 20px 14px 54px;
+    line-height: 22px;
+    position: relative;
+}
+.span{
+    display: block;
+    color: #777;
+    font-size: 12px;
+    white-space: normal;
+}
+
+.scanBtn{
+    line-height: 22px;
+    text-align: left;
+    white-space: nowrap;
+    color: #333;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+}
+.spanScanBox{
+    cursor: pointer;
+    text-align: left;
+    white-space: nowrap;
+    line-height: 22px;
+    text-align: center;
+    color: #333;
+    font-size: 16px;
+}
+
