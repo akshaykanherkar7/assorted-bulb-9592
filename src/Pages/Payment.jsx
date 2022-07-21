@@ -16,26 +16,29 @@ import {
   Box,
 } from "@chakra-ui/react";
 import Upi from "./Upi";
-import { Link } from "react-router-dom";
+import { Link as RouterLink  } from "react-router-dom";
+import Card from "./Card";
 
 const Payment = () => {
   return (
     <Box>
-      <Box className={styled.upiBox}>
+      <Box className={styled.upiBox} flexBasis="0"
+    flexGrow='1'
+    maxWidth =" 100%" >
         <img
           src="https://www.revv.co.in/grapheneImages/newopen/logo.svg"
           alt=""
         />
       </Box>
-      <Box className={styled.upiMainBox} >
+      <Box className={styled.upiMainBox} cursor='pointer' >
         <Box className={styled.upiMainBoxFirstchild} >
-          <Box marginLeft={"5%"}>
-            <h4>Total amount to be paid</h4>
-            <p style={{ fontSize: "12px" }}>(Inclusive of all taxes)</p>
+          <Box marginLeft={"5%"} backgroundColor="#0EBABA">
+            <h4 style={{backgroundColor:"#0EBABA"}}>Total amount to be paid</h4>
           </Box>
-          <Box marginRight={"5%"}>₹ 23014</Box>
+          <Box backgroundColor="#0EBABA" marginRight={"5%"}>₹ 23014</Box>
         </Box>
         <Accordion allowToggle>
+          {/* <form > */}
           <AccordionItem>
             <h2>
               <AccordionButton>
@@ -56,38 +59,26 @@ const Payment = () => {
               </AccordionButton>
             </h2>
             <AccordionPanel>
-              <Button
+              <Button type="submit"
                 h={"50px"}
                 backgroundColor="#0EBABA"
                 width="100%"
                 color={"#FFFFFF"}
               >
                 {/* {" "} */}
-                <Link to="/upi">pay</Link>
+
+                Pay
+                <RouterLink  to="/upi">pay</RouterLink >
 
               </Button>
             </AccordionPanel>
           </AccordionItem>
+          {/* </form> */}
 
-          {/* cradit card */}
 
-          <AccordionItem>
-            <h2>
-              <AccordionButton>
-                <Box flex="1" textAlign="left">
-                  Section 2 title
-                </Box>
-                <AccordionIcon />
-              </AccordionButton>
-            </h2>
-            <AccordionPanel pb={4}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </AccordionPanel>
-          </AccordionItem>
+          
         </Accordion>
+        <Card />
       </Box>
     </Box>
   );
