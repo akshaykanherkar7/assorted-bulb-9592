@@ -5,6 +5,10 @@ import { ChevronRightIcon, ChevronLeftIcon } from "@chakra-ui/icons";
 import styles from "./Middle.module.css";
 import Slider from "react-slick";
 
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+
+
 const Features = () => {
   const [sliderRef, setSliderRef] = useState(1);
   const sliderSettings = 
