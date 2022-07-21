@@ -12,10 +12,10 @@ import {
   Button,
   Text,
   useColorModeValue,
-  Link,
   useDisclosure,
   Center,
 } from "@chakra-ui/react";
+import { Link as RouterLink } from "react-router-dom";
 import { FaFacebook } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import {
@@ -30,7 +30,10 @@ import { useState } from "react";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { registerSignUpAPI } from "../Redux/AuthReducer/auth.action";
+import {
+  getLoginDataAPI,
+  registerSignUpAPI,
+} from "../Redux/AuthReducer/auth.action";
 import { REGISTER_SUCCESS } from "../Redux/AuthReducer/auth.actionTypes";
 
 function reducer(state, action) {
@@ -80,6 +83,8 @@ const initialState = {
 };
 
 const SignUp = () => {
+  // const { isOpen, onOpen, onClose } = useDisclosure();
+  // const finalRef = React.useRef(null);
   //Modal
   const { isOpen, onOpen, onClose } = useDisclosure();
   const finalRef = React.useRef(null);
@@ -92,24 +97,27 @@ const SignUp = () => {
   const navigate = useNavigate();
 
   const signupHandler = () => {
-    dispatch(registerSignUpAPI(state));
-    // .then((res) => {
-    //     dispatch(getLoginData())
-    // })
-    // .then((res) => {
-    //     if(res === REGISTER_SUCCESS){
-    //         navigate("/login")
-    //     }
-    // })
+    dispatch(registerSignUpAPI(state))
+      .then((res) => {
+        dispatch(getLoginDataAPI());
+      })
+      .then((res) => {
+        if (res === REGISTER_SUCCESS) {
+          navigate("/");
+        }
+      });
+    navigate("/login");
+    onClose();
+  };
+
+  const handleNavigate = () => {
+    navigate("/login");
   };
   return (
     <div>
-      <Box ref={finalRef} tabIndex={-1} aria-label="Focus moved to this box">
-        Some other content that'll receive focus on close.
-      </Box>
-      <Button mt={4} onClick={onOpen}>
-        Open Modal
-      </Button>
+      <Text color="blue" onClick={onOpen}>
+        SignUp
+      </Text>
 
       {/* SignUp */}
       <Modal
@@ -123,7 +131,7 @@ const SignUp = () => {
           <ModalHeader>
             <Center>SIGN UP</Center>
           </ModalHeader>
-          <ModalCloseButton />
+          <ModalCloseButton onClick={handleNavigate} />
           <ModalBody h="sm">
             <Flex
               align={"center"}
@@ -256,7 +264,15 @@ const SignUp = () => {
                     </Stack>
                     <Stack pt={6}>
                       <Text align={"center"}>
-                        Already a user? <Link color={"blue.400"}>Login</Link>
+                        Already a user?{" "}
+                        <RouterLink
+                          to="/login"
+                          color={"blue.400"}
+                          onClick={onClose}
+                          style={{ color: "blue" }}
+                        >
+                          Login
+                        </RouterLink>
                       </Text>
                     </Stack>
                   </Stack>
