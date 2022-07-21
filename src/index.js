@@ -11,12 +11,11 @@ import { store } from "./Redux/Store";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <BrowserRouter>
-    <Provider store={store}>
-      <ChakraProvider>
-        <App />
-      </ChakraProvider>
-    </Provider>
-  </BrowserRouter>
+      <Provider store={store}>  
+        <ChakraProvider>  
+              <App />
+        </ChakraProvider>  
+       </Provider>  
+  </BrowserRouter>  
 );
-
 reportWebVitals();
