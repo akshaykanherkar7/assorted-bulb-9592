@@ -44,7 +44,12 @@
 .upiMainBox{
 
 
-    width:40%; height: 600px; border:1px solid red; margin:auto
+    width:40%; 
+    /* border:1px solid red;  */
+    margin:auto;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+ box-sizing: border-box;
+
 }
 
 .upiMainBoxFirstchild{
