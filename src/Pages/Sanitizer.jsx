@@ -66,7 +66,7 @@ const Sanitizer = () => {
         </Box>
       </Flex>
 
-      <Slider ref={setSliderRef} {...sliderSettings}height="100%" width="100%">
+      {/* <Slider ref={setSliderRef} {...sliderSettings} height="100%" width="100%"> */}
         <Box  height="150px" width='100%'>
           <img
             className={styles.imageShra1}
@@ -96,7 +96,7 @@ const Sanitizer = () => {
           />
         </Box>
         <Box  height="150px" width='100%'>
-          {" "}
+          {/* {" "} */}
           <img
             className={styles.imageShra1}
             src="https://revvselfdrivecar.s3-us-west-2.amazonaws.com/staging_images/banner_sanitised_04-min.jpg"
@@ -104,7 +104,7 @@ const Sanitizer = () => {
           />
         </Box>
         
-      </Slider>
+      {/* </Slider> */}
     </div>
   );
 };
