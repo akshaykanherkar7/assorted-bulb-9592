@@ -6,6 +6,7 @@ import HappyC from './HappyC'
 import Investor from './Investor'
 import styles from './Middle.module.css'
 import Sanitizer from './Sanitizer'
+import Serviceable from './Serviceable'
 import Why from './Why'
 
 const Middle = () => {
@@ -18,6 +19,7 @@ const Middle = () => {
         <Download/>
         <Day3/>
         <Investor/>
+        <Serviceable/>
     </div>
   )
 }
