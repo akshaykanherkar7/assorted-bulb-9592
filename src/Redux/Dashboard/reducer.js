@@ -2,13 +2,15 @@ import {
     SET_USER_REQUEST
 } from "./actionTypes";
 
+
+
 const initState = {
     city : "",
     start_date : "",
     end_date : "",
 }
 
-const dashboardreducer = (state = initState, {
+const dashboardreducer = (state = initState,{
     type,
     payload
 }) => {
@@ -20,7 +22,7 @@ const dashboardreducer = (state = initState, {
                 start_date : payload.start_date,
                 end_date : payload.end_date,
             }
-         
+            
         default:
             return {
                 ...state,
@@ -31,3 +33,6 @@ const dashboardreducer = (state = initState, {
 export {
     dashboardreducer
 }
+
+
+

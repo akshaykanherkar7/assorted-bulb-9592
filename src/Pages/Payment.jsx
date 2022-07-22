@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "../style/payment.module.css";
+import styled from "./style/payment.module.css";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import {
   Menu,
