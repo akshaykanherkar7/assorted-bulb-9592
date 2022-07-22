@@ -22,8 +22,7 @@ const dashboardreducer = (state = initState,{
                 start_date : payload.start_date,
                 end_date : payload.end_date,
             }
-       
-
+            
         default:
             return {
                 ...state,
