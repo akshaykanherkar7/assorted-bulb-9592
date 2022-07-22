@@ -1,9 +1,8 @@
 import React from "react";
-
 import { Routes, Route } from "react-router-dom";
 import ReqAuth from "../Hoc/ReqAuth";
 import MyProfile from "./MyProfile";
-
+import Product from "./Product"
 
 const MainRoutes = () => {
   return (
@@ -19,6 +18,7 @@ const MainRoutes = () => {
           }
         ></Route>
         <Route path="/mybookings"></Route>
+        <Route path="/product" element={<Product />}></Route>
       </Routes>
     </div>
   );
