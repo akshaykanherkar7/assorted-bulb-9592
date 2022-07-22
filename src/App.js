@@ -1,11 +1,9 @@
-import './App.css';
-import SearchBox from './Components/SearchBox';
-
+import "./App.css";
 
 function App() {
   return (
     <div>
-       <SearchBox/>
+
     </div>
   );
 }

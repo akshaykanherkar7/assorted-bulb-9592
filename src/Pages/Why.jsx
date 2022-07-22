@@ -5,6 +5,10 @@ import { ChevronRightIcon, ChevronLeftIcon } from "@chakra-ui/icons";
 import styles from "./Middle.module.css";
 import Slider from "react-slick";
 
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+
+
 const Why = () => {
   const [sliderRef, setSliderRef] = useState(1);
   const sliderSettings = {
@@ -36,7 +40,7 @@ const Why = () => {
   };
 
   return (
-    <div>
+    <div >
       <Flex>
         <Box p="4">
           <Text
@@ -59,7 +63,7 @@ const Why = () => {
         </Box>
       </Flex>
 
-      <Slider ref={setSliderRef} {...sliderSettings} height="100%" width="100%">
+      <Slider ref={setSliderRef} {...sliderSettings} height="100%" width="100%" borderRadius='12px' overFlow='hidden'>
         <Box
          boxShadow='rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px'
          borderRadius='12px'
@@ -69,8 +73,8 @@ const Why = () => {
           height="105px"
           width="100%"
         >
-          <Flex>
-            <Box width="30%" bg='white' >
+          <Flex  borderRadius='12px' height={'100%'} >
+            <Box width="30%" bg='white' height='100%' borderRadius='12px' >
               <img
                 className={styles.imageShra12}
                 src="https://www.revv.co.in/assets/RentalImages/HomeScreen/rental2021/whyRevv/home.png"
@@ -78,7 +82,7 @@ const Why = () => {
               />
             </Box>
 
-            <Box width="70%" bg='white' >
+            <Box width="70%" bg='white' overflow='hidden' height='100%' >
               <Heading bg='white'
                 as="h4"
                 size="3xl"
@@ -104,8 +108,8 @@ const Why = () => {
           </Flex>
         </Box>
         <Box  boxShadow='rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px' height="105px" width="90%" bg="white" borderRadius='12px' marginLeft='10px'>
-          <Flex>
-            <Box width="30%" bg='white'>
+          <Flex height='100%'>
+            <Box borderRadius='12px' width="30%" bg='white' height='100%'>
               <img
                 className={styles.imageShra12}
                 src="https://www.revv.co.in/assets/RentalImages/HomeScreen/rental2021/whyRevv/price.png"
@@ -113,7 +117,7 @@ const Why = () => {
               />
             </Box>
 
-            <Box width="70% " bg='white'>
+            <Box width="70% " bg='white' height='100%'>
               <Heading bg='white'
                 as="h4"
                 size="3xl"
@@ -139,8 +143,8 @@ const Why = () => {
           </Flex>
         </Box>
         <Box height="105px" width="90%" bg="white" borderRadius='12px'  marginLeft='10px'  boxShadow='rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px'>
-          <Flex bg="white">
-            <Box width="30%" bg='white'>
+          <Flex bg="white" borderRadius='12px' height='100%'>
+            <Box borderRadius='12px' height='100%' width="30%" bg='white'>
               <img
                 className={styles.imageShra12}
                 src="https://www.revv.co.in/assets/RentalImages/HomeScreen/rental2021/whyRevv/maintained.png"
@@ -148,7 +152,7 @@ const Why = () => {
               />
             </Box>
 
-            <Box width="70%" bg='white'>
+            <Box width="70%" bg='white' height='100%'>
               <Heading
                 as="h4" bg='white'
                 size="3xl"
@@ -174,8 +178,8 @@ const Why = () => {
           </Flex>
         </Box>
         <Box height="105px" width="90%" bg="white" borderRadius='12px'  marginLeft='10px'  boxShadow='rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px'>
-          <Flex bg="white">
-            <Box width="30%" bg='white'>
+          <Flex bg="white" borderRadius='12px'height='100%'>
+            <Box borderRadius='12px' width="30%" bg='white' height='100%'> 
               <img
                 className={styles.imageShra12}
                 src="https://www.revv.co.in/assets/RentalImages/HomeScreen/rental2021/whyRevv/contact.png"
@@ -183,7 +187,7 @@ const Why = () => {
               />
             </Box>
 
-            <Box width="70%" bg='white'>
+            <Box width="70%" bg='white' height='100%'>
               <Heading bg='white'
                 as="h4"
                 size="3xl"

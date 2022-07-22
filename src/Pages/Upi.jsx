@@ -1,17 +1,34 @@
 import { Box, Container, Spacer } from '@chakra-ui/layout';
 import styled from '../style/payment.module.css'
 import React from 'react';
-import { Button, Input } from '@chakra-ui/react';
+import { Button, Input,
+    useColorModeValue,
+    Alert,
+    AlertIcon,
+    AlertDescription,
+    AlertTitle,
+ } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
+
+
 
 const Upi = () => {
+    const navigate = useNavigate();
+    const handleFormSubmit = (e) => {
+        e.preventDefault();
+        //   alert("Order Placed");
+   
+          navigate("/sucess");
+      }
     return<Container h={'500px'} margin='auto' w='35%' boxSizing='border-box' className={styled.contan}  >
         
+
         <Box className={styled.header}>
         <img className={styled.imglog} src="https://cdn.razorpay.com/logos/EM3w4wVw6CAP6s_medium.png" alt="" /> 
         </Box>
 
-        <form>
+        <form onSubmit={handleFormSubmit}>
 
         <Box className={styled.contanUpi}>
             <Box className={styled.contanUpiChildBox}>
@@ -21,14 +38,16 @@ const Upi = () => {
             </Box>
 
             {/* go to paymet sucess */}
-            <Button className={styled.upipayButton}>
-                <Link to='/checkout'>Pay</Link>
+            <Button className={styled.upipayButton} type='submit'>
+                {/* <Link to='/checkout'>Pay</Link> */}
+                pay
 
             </Button>
 
 
         </Box>
         </form>
+    
 
 
         <Box className={styled.scanheading}>
