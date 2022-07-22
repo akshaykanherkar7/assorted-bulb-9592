@@ -60,7 +60,7 @@ const cities = [
   ];
 
   function SearchBox () {
-    const [city, setCity] = React.useState("Delhi-NCR");
+    const [city, setCity] = React.useState("Banglore");
     const [start_date, setStartDate] = React.useState("");
     const [duration, setDuration] = React.useState(0);
     const [end_date, setEndDate] = React.useState("");
@@ -154,7 +154,7 @@ const cities = [
             <DialogTitle>Select your city </DialogTitle>
             <DialogActions className={style.SearchBox__Dropdowns__List}>
               {cities.map((option) => (
-                <button
+                <Button
                   key={option.value}
                   value={option.value}
                   onClick={() => {
@@ -163,17 +163,17 @@ const cities = [
                   }}
                 >
                   {option.label}
-                </button>
+                </Button>
               ))}
             </DialogActions>
           </Dialog>
   
-          <h5 style={{ color: "grey" }}>City</h5>
+          <h3 style={{ color: "grey" }}>City</h3>
           <Button
             onClick={handleClickOpen}
             style={{
               width: "100%",
-              borderBottom: "2px solid black",
+              borderBottom: "1px solid black",
               justifyContent: "flex-start",
               borderRadius: 0,
             }}
@@ -184,11 +184,11 @@ const cities = [
           <div className={style.SearchBox__Dropdowns__Date}>
             <div>
               <label htmlFor="">
-                <h5 style={{ color: "grey" }}>Start Date</h5>
+                <h5 style={{ color: "grey",fontWeight: "bold", fontSize:"20px", fontStyle:"italic" }}>Start time</h5>
               </label>
               <input
                 type="datetime-local"
-                className={style.DateTime}
+                className={style.DateTime1}
                 step={1800}
                 onChange={(e) => setStartDate(e.target.value)}
                 min={
@@ -212,12 +212,12 @@ const cities = [
             </div>
             <div>
               <label htmlFor="">
-                <h5 style={{ color: "grey" }}>End Date</h5>
+                <h5 style={{ color: "grey", fontWeight: "bold",fontSize:"20px", fontStyle:"italic" }}>End time</h5>
               </label>
               <br />
               <input
                 type="datetime-local"
-                className={style.DateTime}
+                className={style.DateTime2}
                 onChange={(e) => setEndDate(e.target.value)}
                 min={start_date}
               />
