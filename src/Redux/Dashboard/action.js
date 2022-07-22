@@ -2,7 +2,6 @@ import {
     SET_USER_REQUEST
 } from "./actionTypes"
 
-
 const setUserRequest = (payload) => {
 
     return {
@@ -11,4 +10,6 @@ const setUserRequest = (payload) => {
     }
 }
 
-export {setUserRequest}
+
+
+export default {setUserRequest}
