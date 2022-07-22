@@ -9,10 +9,6 @@ const initialState = {
 
 export const authReducer = (state = initialState, { type, payload }) => {
   switch (type) {
-    case types.REGISTER_REQ: {
-      return { ...state, isLoading: true, isError: false };
-    }
-
     case types.REGISTER_SUCCESS: {
       return {
         ...state,
@@ -21,24 +17,8 @@ export const authReducer = (state = initialState, { type, payload }) => {
       };
     }
 
-    case types.REGISTER_FAILED: {
-      return {
-        ...state,
-        isLoading: false,
-        isError: true,
-      };
-    }
-
-    case types.GET_LOGINDATA_REQ: {
-      return { ...state, isLoading: true, isError: false };
-    }
-
     case types.GET_LOGINDATA_SUCCESS: {
       return { ...state, loginData: payload, isLoading: false, isError: false };
-    }
-
-    case types.GET_LOGINDATA_FAILED: {
-      return { ...state, isLoading: false, isError: true };
     }
 
     case types.CHECK_LOGIN_REQ: {
@@ -69,6 +49,10 @@ export const authReducer = (state = initialState, { type, payload }) => {
 
     case types.CHECK_LOGIN_FAILED: {
       return { ...state, isAuth: false, isLoading: false, isError: true };
+    }
+
+    case types.LOGOUT: {
+      return { ...state, isAuth: false };
     }
 
     default: {

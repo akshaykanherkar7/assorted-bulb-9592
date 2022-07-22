@@ -25,6 +25,7 @@ import {
   ModalHeader,
   ModalBody,
   ModalCloseButton,
+  useToast,
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
@@ -86,6 +87,7 @@ const SignUp = () => {
   // const { isOpen, onOpen, onClose } = useDisclosure();
   // const finalRef = React.useRef(null);
   //Modal
+  const toast = useToast();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const finalRef = React.useRef(null);
 
@@ -106,6 +108,12 @@ const SignUp = () => {
           navigate("/");
         }
       });
+    toast({
+      title: "Account Created",
+      status: "success",
+      duration: 3000,
+      isClosable: true,
+    });
     navigate("/login");
     onClose();
   };
