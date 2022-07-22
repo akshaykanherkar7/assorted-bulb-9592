@@ -20,6 +20,7 @@ import {
   ModalContent,
   ModalHeader,
   ModalBody,
+  useToast,
   ModalCloseButton,
 } from "@chakra-ui/react";
 import { useState } from "react";
@@ -36,6 +37,7 @@ import {
 } from "../Redux/AuthReducer/auth.action";
 
 export const SignIn = () => {
+  const toast = useToast();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const finalRef = React.useRef(null);
   const [showPassword, setShowPassword] = useState(false);
@@ -53,25 +55,34 @@ export const SignIn = () => {
   }, []);
 
   const handleLogin = () => {
-    // let flag;
-    // for (let i = 0; i < loginData.length; i++) {
-    //   if (loginData[i].email === email && loginData[i].password === password) {
-    //     flag = true;
-    //     localStorage.setItem("LoginData", JSON.stringify(loginData[i]));
-    //     break;
-    //   } else {
-    //     flag = false;
-    //   }
-    // }
+    let flag;
+    for (let i = 0; i < loginData.length; i++) {
+      if (loginData[i].email === email && loginData[i].password === password) {
+        flag = true;
+        localStorage.setItem("LoginData", JSON.stringify(loginData[i]));
+        break;
+      } else {
+        flag = false;
+      }
+    }
 
-    // if (flag === true) {
-    //   alert("Login Success");
-    //   setIsAuth(true);
-    // } else {
-    //   alert("Login Failed");
-    //   setIsAuth(false);
-    // }
+    if (flag === true) {
+      toast({
+        title: "Login Success.",
+        status: "success",
+        duration: 3000,
+        isClosable: true,
+      });
+    } else {
+      toast({
+        title: "Login Failed",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
+    }
     dispatch(checkLoginorNotAPI({ email, password }));
+    navigate("/");
   };
   const handleNavigate = () => {
     navigate("/");

@@ -37,3 +37,7 @@ export const checkLoginorNotAPI = (creds) => (dispatch) => {
       dispatch({ type: types.CHECK_LOGIN_FAILED });
     });
 };
+
+export const logOutAPI = () => (dispatch) => {
+  dispatch({ type: types.LOGOUT });
+};

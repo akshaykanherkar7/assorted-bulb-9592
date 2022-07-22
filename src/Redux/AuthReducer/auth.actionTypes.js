@@ -9,3 +9,5 @@ export const GET_LOGINDATA_FAILED = "get/logindata/fai";
 export const CHECK_LOGIN_REQ = "check/login/req";
 export const CHECK_LOGIN_SUCCESS = "check/login/suc";
 export const CHECK_LOGIN_FAILED = "check/login/fai";
+
+export const LOGOUT = "logout";
