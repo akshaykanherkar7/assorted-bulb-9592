@@ -2,13 +2,12 @@
     position: absolute;
     width: 40%;
     max-width: 500px;
-    max-height: 500px;
+    max-height: 550px;
     background-color: white;
     border: none;
-    box-shadow: 0 2px 6px 0 rgb(0 0 0 / 16%);
-  
-    border-radius: 3px;
-    margin-top: 7%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 12px;
+    margin-top: 4%;
     margin-left: 5%;
     z-index: 1;
     padding: 2%;
@@ -31,6 +30,7 @@
     display: flex;
     justify-content: space-around;
     /* border: 1px solid red; */
+    /* background-color: rgba(231, 231, 231, 0.79); */
   }
   .SearchBox__Dropdowns__Date > div {
     /* border: 1px solid red; */
@@ -67,13 +67,16 @@
   }
   .DateTime1 {
     border: none;
-    border-bottom: 1.5px solid grey;
-    height: 50px;
+    /* border-bottom: 1.5px solid grey; */
+    height: 40px;
     margin-top: 24px;
   }
   .DateTime2 {
     border: none;
-    border-bottom: 1.5px solid grey;
-    height: 50px;
+    /* border-bottom: 1.5px solid grey; */
+    height: 40px;
     margin-top: 0px;
+  }
+  .cityName:hover {
+    color:rgb(7, 139, 139);
   }

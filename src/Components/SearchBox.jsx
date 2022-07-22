@@ -2,11 +2,18 @@ import React from 'react'
 import style from "./SearchBox.module.css";
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import {Dialog} from '@mui/material';
-import { DialogTitle } from '@mui/material'
-import DialogActions from '@mui/material/DialogActions';
 import { Button } from '@chakra-ui/react';
 import { setUserRequest } from '../Redux/Dashboard/action';
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalBody,
+  ModalCloseButton,
+  useDisclosure
+} from '@chakra-ui/react'
+
 
 const cities = [
     {
@@ -64,7 +71,6 @@ const cities = [
     const [start_date, setStartDate] = React.useState("");
     const [duration, setDuration] = React.useState(0);
     const [end_date, setEndDate] = React.useState("");
-    const [open, setOpen] = React.useState(false);
     const userSearch = useSelector((state) => state.dashboard)
   
     const currentDate = new Date();
@@ -96,14 +102,9 @@ const cities = [
       };
       if (duration >= 0) dispatch(setUserRequest(payload));
     };
-  
-    const handleClickOpen = () => {
-      setOpen(true);
-    };
-  
-    const handleClose = () => {
-      setOpen(false);
-    };
+
+    const { isOpen, onOpen, onClose } = useDisclosure()
+
     return (
       <div className={style.SearchBox}>
         <div className={style.SearchBox__TopRow}>
@@ -149,38 +150,48 @@ const cities = [
           <h5>Self drive car rentals in India</h5>
         </div>
   
-        <div className={style.SearchBox__Dropdowns}>
-          <Dialog open={open} onClose={handleClose}>
-            <DialogTitle>Select your city </DialogTitle>
-            <DialogActions className={style.SearchBox__Dropdowns__List}>
+        <div style={{border: "1px solid gray", borderRadius:"12px"}} className={style.SearchBox__Dropdowns}>
+
+          <Modal isOpen={isOpen} onClose={onClose}>
+            <ModalOverlay />
+            <ModalContent>
+              <ModalHeader>Select Your City</ModalHeader>
+              <ModalCloseButton />
+              <ModalBody>
               {cities.map((option) => (
-                <Button
+                <ul style={{listStyle:"none", cursor:"pointer", marginTop:"20px", width:"400px", height:"35px", backgroundColor:"rgba(231, 231, 231, 0.906)"}}
                   key={option.value}
                   value={option.value}
                   onClick={() => {
                     setCity(option.value);
-                    handleClose();
+                    onClose();
                   }}
                 >
-                  {option.label}
-                </Button>
+                  <li className={style.cityName} style={{fontWeight:"bold"}}>{option.label}</li>
+                
+                </ul>
               ))}
-            </DialogActions>
-          </Dialog>
-  
-          <h3 style={{ color: "grey" }}>City</h3>
-          <Button
-            onClick={handleClickOpen}
-            style={{
-              width: "100%",
-              borderBottom: "1px solid black",
-              justifyContent: "flex-start",
-              borderRadius: 0,
-            }}
-            // disableAnimation={true}
-          >
-            {city}
-          </Button>
+              </ModalBody>
+            </ModalContent>
+
+          </Modal>
+    
+          <div style={{display:"flex",backgroundColor:"rgba(231, 231, 231, 0.79)",borderBottom: "1px solid black"}}>
+            <span style={{paddingTop:"12px"}} class="material-symbols-outlined">fmd_bad</span>
+            <Button
+              onClick={onOpen}
+              style={{
+                width: "100%",
+                height :"50px",
+                // borderBottom: "1px solid black",
+                justifyContent: "flex-start",
+                borderRadius: 0,
+              }}
+            >
+              {city}
+            </Button>
+          </div>
+          
           <div className={style.SearchBox__Dropdowns__Date}>
             <div>
               <label htmlFor="">
@@ -236,7 +247,7 @@ const cities = [
                 : ` ${duration} Days`}
             </p>
           )}
-          <button onClick={() => navigate(`/cars/${userSearch.city}`)}>
+          <button onClick={() => navigate(`/cars/${userSearch.city.start_date.end_date}`)}>
             Search
           </button>
         </div>
