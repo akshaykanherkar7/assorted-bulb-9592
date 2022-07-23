@@ -102,7 +102,7 @@ const Product = () => {
     <Box>
       <Navbar></Navbar>
       {/* upper portion, part1 */}
-      <Box>
+      {/* <Box>
         <Box pt="20px" fontSize="14px" pl="47px">
           <Link color="#7f868e">Car Rental </Link>
           <Link color="#7f868e"> Car Rental</Link>
@@ -110,11 +110,11 @@ const Product = () => {
           <Link color="#7f868e"> Car Rental in Bangalore</Link>
           <Link color="#7f868e"> Cars for Rent in Bangalore</Link>
         </Box>
-      </Box>
+      </Box> */}
 
       {/* upper portion, part2  */}
 
-      <Box>
+      <Box mt="30px">
         <Flex>
           {/* p1  */}
           <Box pt="10px" pb="10px" w="300px">
