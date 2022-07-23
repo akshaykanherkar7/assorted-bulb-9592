@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Flex,
@@ -19,30 +19,84 @@ import {
   PopoverArrow,
   PopoverCloseButton,
   PopoverAnchor,
+  CheckboxGroup,
+  useToast,
 } from "@chakra-ui/react";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getCars } from "../Redux/CarReducer/action";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useSearchParams, useLocation } from "react-router-dom";
 // import styles from "./Product.module.css"
 import Productdown from "./Productdown";
 import Navbar from "../Components/Navbar";
 
 const Product = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const linkSortByFuel = searchParams.getAll("sortByFuel");
+  const linkSortBySeats = searchParams.getAll("seats");
+  const linkSortByGearType = searchParams.getAll("gearType");
+  const linksortByPrice = searchParams.getAll("sortByPrice");
+  const toast = useToast();
   const dispatch = useDispatch();
   const { cars } = useSelector((state) => state.car);
   const navigate = useNavigate();
+  const [sortByFuel, setSortByFuel] = useState(linkSortByFuel || []);
+  const [gearType, setGearType] = useState(linkSortByGearType || []);
+  const [seats, setSeats] = useState(linkSortBySeats || []);
+  const [sortByPrice, setSortByPrice] = useState("");
+  const location = useLocation();
 
   useEffect(() => {
-    dispatch(getCars());
-  }, [dispatch]);
-  console.log(cars);
+    if (sortByFuel || gearType || seats || sortByPrice) {
+      let params = {};
+      sortByFuel && (params.sortByFuel = sortByFuel);
+      gearType && (params.gearType = gearType);
+      seats && (params.seats = seats);
+      sortByPrice && (params.sortByPrice = sortByPrice);
+      setSearchParams(params);
+    }
+  }, [sortByFuel, gearType, seats, sortByPrice, setSearchParams]);
+
+  useEffect(() => {
+    if (cars.length === 0 || location.search) {
+      const getCarsParams = {
+        params: {
+          carbrief2: searchParams.getAll("sortByFuel"),
+          carbrief: searchParams.getAll("gearType"),
+          carbrief3: searchParams.getAll("seats"),
+          _sort: sortByPrice && "priceLabel3",
+          _order: sortByPrice,
+        },
+      };
+      dispatch(getCars(getCarsParams));
+    }
+  }, [location.search, searchParams]);
+
+  useEffect(() => {
+    if (
+      sortByFuel.length === 0 ||
+      gearType.length === 0 ||
+      seats.length === 0 ||
+      sortByPrice === ""
+    ) {
+      dispatch(getCars());
+    }
+  }, [sortByFuel, gearType, seats, sortByPrice, dispatch]);
 
   const handleCarDetail = (el) => {
     console.log("IN CARDETAIL");
-    localStorage.setItem("CarProduct", JSON.stringify(el));
-    navigate("/booking-summary");
+    if (el.btn === "Book") {
+      localStorage.setItem("CarProduct", JSON.stringify(el));
+      navigate("/booking-summary");
+    } else {
+      toast({
+        title: "Car Is Not Available Now.",
+        status: "error",
+        duration: 3000,
+        isClosable: true,
+      });
+    }
   };
   return (
     <Box>
@@ -90,17 +144,27 @@ const Product = () => {
                 <Flex pt="10px">
                   <Box color="grey">Sort by:</Box>
                   <Spacer />
-                  <Box pr="80px">
+                  <Box pr="210px">
                     {/* Popularity */}
                     <Popover>
                       <PopoverTrigger>
-                        <Box>Popularity</Box>
+                        <Box cursor={"pointer"}>Popularity</Box>
                       </PopoverTrigger>
                       <PopoverContent>
                         <PopoverArrow />
                         <PopoverCloseButton />
-                        <PopoverHeader>Price: Low to High</PopoverHeader>
-                        <PopoverHeader>Price: High to Low </PopoverHeader>
+                        <PopoverHeader
+                          cursor={"pointer"}
+                          onClick={() => setSortByPrice("asc")}
+                        >
+                          Price: Low to High
+                        </PopoverHeader>
+                        <PopoverHeader
+                          cursor={"pointer"}
+                          onClick={() => setSortByPrice("desc")}
+                        >
+                          Price: High to Low{" "}
+                        </PopoverHeader>
                         <PopoverHeader>
                           Extra Km Charges: Low to High{" "}
                         </PopoverHeader>
@@ -160,36 +224,65 @@ const Product = () => {
             <Heading as="h3" size="sm">
               Fuel Type
             </Heading>
-            <Box color="#7f868e" size="sm">
-              <Checkbox size="sm">Diesel</Checkbox>
+            <CheckboxGroup
+              color="#7f868e"
+              size="sm"
+              value={sortByFuel}
+              onChange={(value) => {
+                setSortByFuel(value);
+              }}
+            >
+              <Checkbox size="sm" value="Diesel">
+                Diesel
+              </Checkbox>
               <br />
-              <Checkbox size="sm">Petrol</Checkbox>
+              <Checkbox size="sm" value="Petrol">
+                Petrol
+              </Checkbox>
               <br />
               <br />
-            </Box>
+            </CheckboxGroup>
 
             {/* heading4 */}
             <Heading as="h3" size="sm">
               Transmission Type
             </Heading>
-            <Box color="#7f868e" size="sm">
-              <Checkbox size="sm">Automatic</Checkbox>
+            <CheckboxGroup
+              value={gearType}
+              onChange={(value) => setGearType(value)}
+              color="#7f868e"
+              size="sm"
+            >
+              <Checkbox value="Automatic" size="sm">
+                Automatic
+              </Checkbox>
               <br />
-              <Checkbox size="sm">Manual</Checkbox>
+              <Checkbox value="Manual" size="sm">
+                Manual
+              </Checkbox>
               <br />
               <br />
-            </Box>
+            </CheckboxGroup>
 
             {/* heading4 */}
             <Heading as="h3" size="sm">
               Seating Capacity
             </Heading>
-            <Box color="#7f868e" size="sm">
-              <Checkbox size="sm">5 seats</Checkbox>
+            <CheckboxGroup
+              value={seats}
+              onChange={(value) => setSeats(value)}
+              color="#7f868e"
+              size="sm"
+            >
+              <Checkbox value="5 seats" size="sm">
+                5 seats
+              </Checkbox>
               <br />
-              <Checkbox size="sm">7 seats</Checkbox>
+              <Checkbox value="7 seats" size="sm">
+                7 seats
+              </Checkbox>
               <br />
-            </Box>
+            </CheckboxGroup>
           </Box>
           {/* rigth-box   */}
 
@@ -353,11 +446,16 @@ const Product = () => {
                           ml="100px"
                           w="100px"
                           h="30px"
-                          colorScheme="teal"
+                          color="white"
                           size="md"
                           onClick={() => handleCarDetail(ele)}
+                          style={
+                            ele.btn === "Book"
+                              ? { backgroundColor: "teal" }
+                              : { backgroundColor: "#ff818b" }
+                          }
                         >
-                          Book
+                          {ele.btn}
                         </Button>
                       </Box>
                     </Flex>
