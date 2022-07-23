@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Middle.module.css";
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, SimpleGrid, Text } from "@chakra-ui/react";
 
 const Serviceable = () => {
   const cities = [
@@ -53,8 +53,8 @@ const Serviceable = () => {
             Serviceable cities
           </Text>
         </Box>
-        <Flex width="100%" backgroundColor="#2a2b36">
-          <Box width="33%" backgroundColor="#2a2b36" >
+        <SimpleGrid width="100%" height='90%' overflow='hidden' backgroundColor="#2a2b36" columns={[1,2,3]} spacing='20px'>
+          <Box  height='100%' backgroundColor="#2a2b36" overflow='hidden' >
             {cities.map((el) => {
               return (
                 <ul>
@@ -65,7 +65,7 @@ const Serviceable = () => {
               );
             })}
           </Box>
-          <Box width="33%" backgroundColor="#2a2b36" >
+          <Box  height='100%'  backgroundColor="#2a2b36" overflow='hidden' >
             {row2.map((el) => {
               return (
                 <ul>
@@ -76,7 +76,7 @@ const Serviceable = () => {
               );
             })}
           </Box>
-          <Box width="33%" backgroundColor="#2a2b36">
+          <Box  height='100%' backgroundColor="#2a2b36" overflow='hidden'>
             {row3.map((el) => {
               return (
                 <ul>
@@ -87,7 +87,7 @@ const Serviceable = () => {
               );
             })}
           </Box>
-        </Flex>
+        </SimpleGrid>
       </Box>
     </div>
   );
