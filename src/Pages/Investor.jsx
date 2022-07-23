@@ -1,10 +1,10 @@
-import { Box, Center, Flex, Heading, Spacer, Text } from "@chakra-ui/react";
+import { Box, Center, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
 
 const Investor = () => {
   return (
     <div style={{ width: "100%", height: "350px" }}>
-      <Box width="100%" height="90%" >
+      <Box width="100%" height="90%">
         <Box p="4">
           <Text
             fontSize="3xl"
@@ -22,9 +22,21 @@ const Investor = () => {
           backgroundColor="white"
           borderRadius="12px"
         >
-          <Flex width="100%" height="100%" backgroundColor="white"  flexWrap='wrap' boxSizing="border-box">
-            <Box width="25%" height="230px" backgroundColor="white">
-              <Box marginTop="40px" backgroundColor="white">
+          <SimpleGrid
+            columns={[2,2,4]}
+            width="100%"
+            height="100%"
+            backgroundColor="white"
+            margin={"auto"}
+            
+          >
+            <Box width="45%" height="230px" backgroundColor="white">
+              <Box
+                backgroundColor="white"
+                
+                margin="50px 50px 20px 80px"
+                width="55%"
+              >
                 <Center backgroundColor="white">
                   <img
                     style={{ width: "180px", height: "100px" }}
@@ -34,7 +46,11 @@ const Investor = () => {
                 </Center>
               </Box>
 
-              <Center backgroundColor="white" marginTop='20px'>
+              <Center
+                backgroundColor="white"
+               
+                width="250px"
+              >
                 <Text
                   fontFamily='apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"'
                   line-height="1.43"
@@ -45,9 +61,13 @@ const Investor = () => {
                 </Text>
               </Center>
             </Box>
-          
-            <Box width="25%" height="100%" backgroundColor="white" >
-              <Box marginTop="40px" backgroundColor="white">
+
+            <Box width="45%" height="100%" backgroundColor="white">
+              <Box
+                backgroundColor="white"
+                margin="50px 50px 20px 80px"
+                width="55%" 
+              >
                 <Center backgroundColor="white">
                   <img
                     style={{ width: "180px", height: "100px" }}
@@ -57,7 +77,11 @@ const Investor = () => {
                 </Center>
               </Box>
 
-              <Center backgroundColor="white" marginTop='20px'>
+              <Center
+                backgroundColor="white"
+              
+                width="250px"
+              >
                 <Text
                   fontFamily='apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"'
                   line-height="1.43"
@@ -68,9 +92,13 @@ const Investor = () => {
                 </Text>
               </Center>
             </Box>
-         
-            <Box width="25%" height="100%" backgroundColor="white">
-              <Box marginTop="40px" backgroundColor="white">
+
+            <Box width="45%" height="100%" backgroundColor="white">
+              <Box
+                backgroundColor="white"
+                margin="50px 50px 20px 80px"
+                width="55%" 
+              >
                 <Center backgroundColor="white">
                   <img
                     style={{ width: "180px", height: "100px" }}
@@ -80,7 +108,12 @@ const Investor = () => {
                 </Center>
               </Box>
 
-              <Center backgroundColor="white" marginTop='20px'>
+              <Center
+                backgroundColor="white"
+                marginTop="20px"
+               
+                width="250px"
+              >
                 <Text
                   fontFamily='apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"'
                   line-height="1.43"
@@ -91,9 +124,13 @@ const Investor = () => {
                 </Text>
               </Center>
             </Box>
-            
-            <Box width="25%" height="100%" backgroundColor="white" >
-              <Box marginTop="40px" backgroundColor="white">
+
+            <Box width="45%" height="100%" backgroundColor="white">
+              <Box
+                backgroundColor="white"
+                margin="50px 50px 20px 80px"
+                width="55%"
+              >
                 <Center backgroundColor="white">
                   <img
                     style={{ width: "180px", height: "100px" }}
@@ -103,7 +140,12 @@ const Investor = () => {
                 </Center>
               </Box>
 
-              <Center backgroundColor="white" marginTop='20px'>
+              <Center
+                backgroundColor="white"
+                marginTop="20px"
+                width="250px"
+               
+              >
                 <Text
                   fontFamily='apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"'
                   line-height="1.43"
@@ -114,8 +156,7 @@ const Investor = () => {
                 </Text>
               </Center>
             </Box>
-            
-          </Flex>
+          </SimpleGrid>
         </Box>
       </Box>
     </div>
