@@ -1,6 +1,6 @@
 *{
     background-color: #f1f4f8;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    
 }
 
 .MainShra{
@@ -30,4 +30,15 @@
     margin-top: 20px;
     object-fit: contain;
     background-color:  white ;
+}
+.nameshra{
+    background-color:rgb(42,43,54);
+    color:rgba(152, 166, 179, 0.81);
+    font-family:Poppins;
+    list-style: none;
+    line-height:40px
+}
+.nameshra:hover{
+    color: white;
+   
 }

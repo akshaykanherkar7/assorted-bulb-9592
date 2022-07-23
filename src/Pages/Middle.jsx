@@ -20,6 +20,7 @@ const Middle = () => {
         <Day3/>
         <Investor/>
         <Serviceable/>
+      
     </div>
   )
 }
