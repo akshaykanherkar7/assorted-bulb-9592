@@ -73,7 +73,7 @@ const HappyC = () => {
       <Slider ref={setSliderRef} {...sliderSettings}height="100%" width="100%" display='flex' gap='20px' borderRadius='12px'>
         <Box  height="325px" width='90%'borderRadius='12px'  >
         <Box  height="325px" width='90%' borderRadius='12px'>
-        <Box width="100%" bg='white'borderRadius='12px' height='100%' boxShadow='rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;' >
+        <Box width="100%" bg='white'borderRadius='12px' height='90%' boxShadow='rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;' >
               <Heading overflow={"hidden"} bg='white'
                 as='h2' size='2xl'
                 fontWeight="600"
@@ -85,7 +85,7 @@ const HappyC = () => {
               >
                 Prateek Srivastava
               </Heading>
-              <Text  overflow='scroll' bg='white'
+              <Text   bg='white'
                 width="80%"
                 lineHeight="2"
                 margin="4px 0px 8px 8px"
@@ -100,7 +100,7 @@ const HappyC = () => {
         </Box>
         <Box borderRadius='12px'height="325px" width='90%' >
         <Box borderRadius='12px'  height="325px" width='90%' >
-        <Box borderRadius='12px' width="100%" bg='white' height='100%' boxShadow='rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;'>
+        <Box borderRadius='12px' width="100%" bg='white' height='90%' boxShadow='rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;'>
               <Heading overflow={"hidden"} bg='white'
               justifyContent='center'
                as='h2' size='2xl'
@@ -128,7 +128,7 @@ const HappyC = () => {
         </Box>
         <Box borderRadius='12px'  height="325px" width='90%' >
         <Box borderRadius='12px' height="325px" width='90%' >
-        <Box borderRadius='12px' width="100%" bg='white' height='100%' boxShadow='rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;'>
+        <Box borderRadius='12px' width="100%" bg='white' height='90%' boxShadow='rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;'>
               <Heading overflow={"hidden"} bg='white'
                as='h2' size='2xl'
                 fontWeight="600"
