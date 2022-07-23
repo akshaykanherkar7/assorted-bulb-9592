@@ -36,9 +36,9 @@ import {
   getLoginDataAPI,
 } from "../Redux/AuthReducer/auth.action";
 
-export const SignIn = () => {
+export const SignIn = ({ isOpen, onOpen, onClose }) => {
   const toast = useToast();
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  // const { isOpen, onOpen, onClose } = useDisclosure();
   const finalRef = React.useRef(null);
   const [showPassword, setShowPassword] = useState(false);
   const [email, setEmail] = useState("");
@@ -164,14 +164,16 @@ export const SignIn = () => {
                     </Stack>
                     <Stack pt={6}>
                       <Flex justifyContent="space-evenly">
-                        <Text align={"center"}>Don't have account? </Text>
-                        <RouterLink
+                        <Text  align={"center"}>
+                          Don't have account?{" "}
+                        </Text>
+                        {/* <RouterLink
                           to="/signup"
                           color={"blue.400"}
-                          alignItems="center"
-                        >
-                          <SignUp></SignUp>
-                        </RouterLink>
+                          alignItems="center" 
+                        >*/}
+                        <SignUp ></SignUp>
+                        {/* </RouterLink> */}
                       </Flex>
                     </Stack>
                     <Center p={1}>

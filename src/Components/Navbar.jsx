@@ -2,7 +2,8 @@ import React from "react";
 import styles from "./Navbar.module.css";
 import SignIn from "../Pages/SignIn";
 import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+
 import {
   Menu,
   MenuButton,
@@ -15,23 +16,44 @@ import {
   Image,
   Flex,
   Box,
+  useDisclosure,
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
+import { logOutAPI } from "../Redux/AuthReducer/auth.action";
 
 const Navbar = () => {
+  const { isOpen, onOpen, onClose } = useDisclosure();
+
   const { isAuth } = useSelector((state) => state.auth);
   const user = JSON.parse(localStorage.getItem("LoginData"));
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleMyProfile = () => {
-    navigate("/profile")
+    navigate("/profile");
   };
+
+  const handleNavigate = () => {
+    navigate("/");
+  };
+
+  const handleBooking = () => {
+    navigate("/mybookings");
+  };
+
+  const handleLogout = () => {
+    dispatch(logOutAPI());
+    navigate("/");
+  };
+
+  
   return (
     <div>
       <div className={styles.mainDiv}>
         <div className={styles.div1}>
           <div className={styles.imgDiv}>
             <img
+              onClick={handleNavigate}
               src="https://www.revv.co.in/grapheneImages/newopen/logo.svg"
               alt="rev_logo"
             />
@@ -69,7 +91,7 @@ const Navbar = () => {
                   <i class="fa-solid fa-user"></i>
                   <span>My Profile</span>
                 </MenuItem>
-                <MenuItem minH="40px" gap="30px">
+                <MenuItem minH="40px" gap="30px" onClick={handleBooking}>
                   <i class="fa-solid fa-car"></i>
                   <span>My Bookings</span>
                 </MenuItem>
@@ -77,7 +99,7 @@ const Navbar = () => {
                   <i class="fa-solid fa-car-side"></i>
                   <span>My Subscriptions</span>
                 </MenuItem>
-                <MenuItem minH="40px" gap="30px">
+                <MenuItem minH="40px" gap="30px" onClick={handleLogout}>
                   <i class="fa-solid fa-arrow-right-from-bracket"></i>
                   <span>Logout</span>
                 </MenuItem>
@@ -87,9 +109,13 @@ const Navbar = () => {
             <div className={styles.innerDiv3}>
               <span class="material-symbols-outlined">login</span>
               <div style={{ marginLeft: "10px", marginTop: "-17px" }}>
-                <Link to="/login">
-                  <SignIn></SignIn>
-                </Link>
+                {/* <Link to="/login"> */}
+                <SignIn
+                  isOpen={isOpen}
+                  onOpen={onOpen}
+                  onClose={onClose}
+                ></SignIn>
+                {/* </Link> */}
               </div>
             </div>
           )}
