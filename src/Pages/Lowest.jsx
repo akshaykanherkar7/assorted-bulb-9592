@@ -6,21 +6,19 @@ const Lowest = () => {
   return (
     <div
       style={{
-        width: "80%",
-        height: "800px",
-        margin: "auto"
-       ,
+        width: "100%",
+        margin: "auto",
         marginTop: "50px",
       }}
     >
-      <Box width="98%"  margin="auto">
+      <Box width="98%" margin="auto">
         <Box p="4">
           <Text
             fontSize="3xl"
             fontFamily="Poppins"
             color="rgba(152, 166, 179, 0.81)"
             fontWeight="600"
-            marginLeft='-20px'
+            marginLeft="-20px"
           >
             Safe, Sanitized Car Subscription You Can Count On
           </Text>
@@ -51,7 +49,8 @@ const Lowest = () => {
             fontSize="3xl"
             fontFamily="Poppins"
             color="rgba(152, 166, 179, 0.81)"
-            fontWeight="600"  marginLeft='-20px'
+            fontWeight="600"
+            marginLeft="-20px"
           >
             Self-Drive Car Rentals
           </Text>
@@ -72,30 +71,32 @@ const Lowest = () => {
             fontSize="3xl"
             fontFamily="Poppins"
             color="rgba(152, 166, 179, 0.81)"
-            fontWeight="600"  marginLeft='-20px'
+            fontWeight="600"
+            marginLeft="-20px"
           >
             Affordable, Convenient & Safe
           </Text>
         </Box>
         <Box>
-        <ul>
-        With Revv, you can rent a car at a time that is convenient to you and
-        get it delivered right to your doorstep. Apart from an hourly rate
-        starting at just Rs. 33/hour, Revv also offers flexible car rental
-        services. You can choose monthly car rental packages, unlimited
-        kilometre packages, or even get a brand new car from Revv by simply
-        paying the first year’s insurance. Additionally, all cars in our fleet
-        have insurance, so you’ll be safe and secure while cruising down open
-        roads.
-        </ul>
-      </Box>
-        
+          <ul>
+            With Revv, you can rent a car at a time that is convenient to you
+            and get it delivered right to your doorstep. Apart from an hourly
+            rate starting at just Rs. 33/hour, Revv also offers flexible car
+            rental services. You can choose monthly car rental packages,
+            unlimited kilometre packages, or even get a brand new car from Revv
+            by simply paying the first year’s insurance. Additionally, all cars
+            in our fleet have insurance, so you’ll be safe and secure while
+            cruising down open roads.
+          </ul>
+        </Box>
+
         <Box p="4">
           <Text
             fontSize="3xl"
             fontFamily="Poppins"
             color="rgba(152, 166, 179, 0.81)"
-            fontWeight="600"  marginLeft='-20px'
+            fontWeight="600"
+            marginLeft="-20px"
           >
             Why Rev
           </Text>
@@ -124,13 +125,14 @@ const Lowest = () => {
             </li>
           </ul>
         </Box>
-        
+
         <Box p="4">
           <Text
             fontSize="3xl"
             fontFamily="Poppins"
             color="rgba(152, 166, 179, 0.81)"
-            fontWeight="600"  marginLeft='-20px'
+            fontWeight="600"
+            marginLeft="-20px"
           >
             Pick Your Favourite Car
           </Text>
@@ -149,7 +151,8 @@ const Lowest = () => {
             fontSize="3xl"
             fontFamily="Poppins"
             color="rgba(152, 166, 179, 0.81)"
-            fontWeight="600"  marginLeft='-20px'
+            fontWeight="600"
+            marginLeft="-20px"
           >
             Extensive Network
           </Text>
@@ -168,7 +171,8 @@ const Lowest = () => {
             fontSize="3xl"
             fontFamily="Poppins"
             color="rgba(152, 166, 179, 0.81)"
-            fontWeight="600"  marginLeft='-20px'
+            fontWeight="600"
+            marginLeft="-20px"
           >
             Rent a Car
           </Text>
