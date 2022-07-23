@@ -22,12 +22,14 @@ const CarBooking = () => {
   const handlePayPage = () => {
     navigate("/payment");
   };
-  localStorage.setItem("Total", carDetail.priceLabel3 + 400 + 2000);
+
+  // localStorage.setItem("Total", carDetail.priceLabel3 + 400 + 2000);
   // main div
   const duration = localStorage.getItem("duration");
 
   return (
-    <Box className={styled.mainBox_Booking}>
+ 
+    <Box className={styled.mainBox_Booking} maxWidth="100%" >
       <Box width={"80%"} boxSizing="border-box" paddingBottom={"2%"}>
         {/* {/* main box for booking details */}
 
@@ -35,7 +37,7 @@ const CarBooking = () => {
           display={"flex"}
           gap="20px"
           height={"250px "}
-          width={"100%"}
+          // width={"100%"}
           marginBottom="2%"
           boxShadow="rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;"
         >
@@ -239,7 +241,7 @@ const CarBooking = () => {
             </Tr>
             <Tr>
               <Td className={styled.left_td_Fare}>Extra kms charge</Td>
-              <Td className={styled.right_td_Fare}> {carDetail.extrakm}</Td>
+              {/* <Td className={styled.right_td_Fare}> {carDetail.extrakm}</Td> */}
             </Tr>
             <Tr>
               <Td className={styled.left_td_Fare}>
@@ -256,6 +258,7 @@ const CarBooking = () => {
         </Center>
       </Box>
     </Box>
+   
   );
 };
 
