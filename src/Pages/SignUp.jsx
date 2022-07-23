@@ -105,7 +105,7 @@ const SignUp = () => {
       })
       .then((res) => {
         if (res === REGISTER_SUCCESS) {
-          navigate("/");
+          navigate("/"); 
         }
       });
     toast({
@@ -114,6 +114,7 @@ const SignUp = () => {
       duration: 3000,
       isClosable: true,
     });
+    navigate("/login");
     onClose();
   };
 
@@ -122,7 +123,7 @@ const SignUp = () => {
   };
   return (
     <div>
-      <Text style={{ cursor: "pointer" }} color="blue" onClick={onOpen}>
+      <Text color="blue" onClick={onOpen}>
         SignUp
       </Text>
 
@@ -138,7 +139,7 @@ const SignUp = () => {
           <ModalHeader>
             <Center>SIGN UP</Center>
           </ModalHeader>
-          <ModalCloseButton />
+          <ModalCloseButton onClick={handleNavigate} />
           <ModalBody h="sm">
             <Flex
               align={"center"}
@@ -270,18 +271,16 @@ const SignUp = () => {
                       </Button>
                     </Stack>
                     <Stack pt={6}>
-                      <Text align={"center"} onClick={onClose}>
+                      <Text align={"center"}>
                         Already a user?{" "}
-                        {/* <RouterLink
+                        <RouterLink
                           to="/login"
                           color={"blue.400"}
                           onClick={onClose}
                           style={{ color: "blue" }}
-                        > */}
-                        <label style={{ color: "blue", cursor: "pointer" }}>
+                        >
                           Login
-                        </label>
-                        {/* </RouterLink> */}
+                        </RouterLink>
                       </Text>
                     </Stack>
                   </Stack>

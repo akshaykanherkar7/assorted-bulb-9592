@@ -23,7 +23,8 @@ const CarBooking = () => {
   const handlePayPage = () => {
     navigate("/payment");
   };
-  localStorage.setItem("Total", carDetail.priceLabel3 + 400 + 2000);
+
+  // localStorage.setItem("Total", carDetail.priceLabel3 + 400 + 2000);
   // main div
   const duration = localStorage.getItem("duration");
 
@@ -45,9 +46,7 @@ const CarBooking = () => {
             {/* left box */}
             <Box width={"35%"} h="250px">
               {/* name cwhich come through map */}
-
               <h3 paddingLeft="10%">{carDetail.title}</h3>
-
               <img className={styled.img} src={carDetail.imgsrc} alt="" />
             </Box>
 
@@ -235,7 +234,6 @@ const CarBooking = () => {
                   ₹ {carDetail.priceLabel3 + 400 + 2000}
                 </Td>
               </Tr>
-
               <Tr>
                 <Td className={styled.left_td_Fare}> Kms limit</Td>
                 <Td className={styled.right_td_Fare}> unlimited kms</Td>
