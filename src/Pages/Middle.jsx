@@ -8,6 +8,7 @@ import styles from './Middle.module.css'
 import Sanitizer from './Sanitizer'
 import Serviceable from './Serviceable'
 import Why from './Why'
+import Footer from './Footer'
 
 const Middle = () => {
   return (
@@ -20,7 +21,7 @@ const Middle = () => {
         <Day3/>
         <Investor/>
         <Serviceable/>
-      
+        
     </div>
   )
 }
