@@ -46,7 +46,9 @@ const Navbar = () => {
     navigate("/");
   };
 
-  
+  const handleFAQ = () => {
+    navigate("/faq");
+  };
   return (
     <div>
       <div className={styles.mainDiv}>
@@ -69,7 +71,9 @@ const Navbar = () => {
             <p style={{ fontWeight: "bold", fontSize: "17px" }}>Mahindra</p>
             <p style={{ marginLeft: "5px", fontSize: "14px" }}>Subscription</p>
           </div>
-          <div className={styles.innerDiv2}>FAQs</div>
+          <div className={styles.innerDiv2} onClick={handleFAQ}>
+            FAQs
+          </div>
 
           {isAuth ? (
             <Menu>
