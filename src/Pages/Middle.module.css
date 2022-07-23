@@ -1,13 +1,9 @@
-*{
-    background-color: #f1f4f8;
-    
-}
-
 .MainShra{
     width: 80%;
     /* height: 180px; */
     /* border:1px solid black; */
     margin: auto;
+    background-color: #f1f4f8;
 }
 .imageShra{
     width: 95%;

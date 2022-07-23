@@ -48,7 +48,7 @@ const Card = () => {
     e.preventDefault();
       // alert("Order Placed");
     
-      navigate("/sucess");
+      navigate("/success");
   }
 
 

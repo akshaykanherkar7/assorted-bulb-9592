@@ -1,12 +1,10 @@
 import "./App.css";
-import Middle from './Pages/Middle'
-
+import MainRoutes from "./Pages/MainRoutes";
 
 function App() {
-
   return (
     <div>
-    <Middle/>
+      <MainRoutes></MainRoutes>
     </div>
   );
 }

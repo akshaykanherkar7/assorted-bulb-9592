@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "./style/payment.module.css";
+import styled from "../style/payment.module.css";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import {
   Menu,
@@ -15,27 +15,38 @@ import {
   Accordion,
   Box,
 } from "@chakra-ui/react";
-import Upi from "./Upi";
-import { Link as RouterLink  } from "react-router-dom";
 import Card from "./Card";
+import { useNavigate } from "react-router-dom";
 
 const Payment = () => {
+  const Total = localStorage.getItem("Total");
+  const navigate = useNavigate();
+  const handlePay = () => {
+    navigate("/upi");
+  };
   return (
     <Box>
-      <Box className={styled.upiBox} flexBasis="0"
-    flexGrow='1'
-    maxWidth =" 100%" >
+      <Box
+        className={styled.upiBox}
+        flexBasis="0"
+        flexGrow="1"
+        maxWidth=" 100%"
+      >
         <img
           src="https://www.revv.co.in/grapheneImages/newopen/logo.svg"
           alt=""
         />
       </Box>
-      <Box className={styled.upiMainBox} cursor='pointer' >
-        <Box className={styled.upiMainBoxFirstchild} >
+      <Box className={styled.upiMainBox} cursor="pointer">
+        <Box className={styled.upiMainBoxFirstchild}>
           <Box marginLeft={"5%"} backgroundColor="#0EBABA">
-            <h4 style={{backgroundColor:"#0EBABA"}}>Total amount to be paid</h4>
+            <h4 style={{ backgroundColor: "#0EBABA" }}>
+              Total amount to be paid
+            </h4>
           </Box>
-          <Box backgroundColor="#0EBABA" marginRight={"5%"}>₹ 23014</Box>
+          <Box backgroundColor="#0EBABA" marginRight={"5%"}>
+            ₹ {Total}
+          </Box>
         </Box>
         <Accordion allowToggle>
           {/* <form > */}
@@ -59,24 +70,20 @@ const Payment = () => {
               </AccordionButton>
             </h2>
             <AccordionPanel>
-              <Button type="submit"
+              <Button
+                type="submit"
                 h={"50px"}
                 backgroundColor="#0EBABA"
                 width="100%"
                 color={"#FFFFFF"}
+                onClick={handlePay}
               >
                 {/* {" "} */}
-
                 Pay
-                <RouterLink  to="/upi">pay</RouterLink >
-
               </Button>
             </AccordionPanel>
           </AccordionItem>
           {/* </form> */}
-
-
-          
         </Accordion>
         <Card />
       </Box>

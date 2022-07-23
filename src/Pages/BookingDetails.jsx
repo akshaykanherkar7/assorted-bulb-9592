@@ -1,29 +1,38 @@
 import React from "react";
 import { Text } from "@chakra-ui/react";
 import {
-  Menu,
-  MenuButton,
-  MenuList,
-  MenuItem,
-  MenuItemOption,
-  MenuGroup,
-  MenuOptionGroup,
-  MenuDivider,
-  Image,
   Flex,
   Box,
-  FormLabel,
+  Table,
+  Thead,
+  Tbody,
+  Tfoot,
+  Tr,
+  Th,
+  Td,
+  TableCaption,
+  TableContainer,
 } from "@chakra-ui/react";
-import { useDispatch } from "react-redux";
-import { logOutAPI } from "../Redux/AuthReducer/auth.action";
 import Navbar from "../Components/Navbar";
+import { useDispatch, useSelector } from "react-redux";
+import { logOutAPI } from "../Redux/AuthReducer/auth.action";
+import { useNavigate } from "react-router-dom";
 
-const MyProfile = () => {
+const BookingDetails = () => {
   const user = JSON.parse(localStorage.getItem("LoginData"));
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const handleLogOut = () => {
     dispatch(logOutAPI());
+    navigate("/");
   };
+
+  const carDetail = JSON.parse(localStorage.getItem("CarProduct"));
+  const { start_date, end_date, city } = useSelector(
+    (state) => state.dashboard
+  );
+
+  const duration = localStorage.getItem("duration");
   return (
     <div>
       <Navbar></Navbar>
@@ -93,60 +102,36 @@ const MyProfile = () => {
           <hr style={{ marginTop: "15px" }} />
         </Box>
 
-        <Box
-          //  border="1px solid red"
-          h="300px"
-          w="70%"
-          mt="80px"
-        >
-          <Flex gap=" 70px">
-            <Box cursor="no-drop">
-              <FormLabel cursor="no-drop" color="gray">
-                Name
-              </FormLabel>
-              <Text
-                borderRadius="5px"
-                color="gray"
-                border="1px solid lightgray"
-                p="10px"
-                w="100%"
-              >
-                {user.fname + " " + user.lname}
-              </Text>
-            </Box>
-            <Box cursor="no-drop">
-              <FormLabel cursor="no-drop" color="gray">
-                E-mail
-              </FormLabel>
-              <Text
-                borderRadius="5px"
-                color="gray"
-                border="1px solid lightgray"
-                p="10px"
-                w="100%"
-              >
-                {user.email}
-              </Text>
-            </Box>
-          </Flex>
-          <Box cursor="no-drop" mt="30px">
-            <FormLabel cursor="no-drop" color="gray">
-              Phone-Number
-            </FormLabel>
-            <Text
-              borderRadius="5px"
-              color="gray"
-              border="1px solid lightgray"
-              p="10px"
-              w="15%"
-            >
-              {`+91-${user.mobile}`}
-            </Text>
-          </Box>
+        <Box h="200px" w="70%" mt="80px">
+          <TableContainer>
+            <Table variant="simple">
+              <TableCaption>Booking Details</TableCaption>
+              <Thead>
+                <Tr>
+                  <Th>Car Model</Th>
+                  <Th>Id</Th>
+                  <Th>start date</Th>
+                  <Th>end date</Th>
+                  <Th>duration</Th>
+                  <Th>city</Th>
+                </Tr>
+              </Thead>
+              <Tbody>
+                <Tr>
+                  <Td>{carDetail.title}</Td>
+                  <Td>{Math.floor(Math.random(0) * 100)}</Td>
+                  <Td>{start_date}</Td>
+                  <Td>{end_date}</Td>
+                  <Td>{duration}</Td>
+                  <Td>{city}</Td>
+                </Tr>
+              </Tbody>
+            </Table>
+          </TableContainer>
         </Box>
       </Box>
     </div>
   );
 };
 
-export default MyProfile;
+export default BookingDetails;
