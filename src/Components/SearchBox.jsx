@@ -162,10 +162,10 @@ function SearchBox() {
       </div>
 
       <div
-        style={{ border: "1px solid gray", borderRadius: "12px" }}
+        style={{ border: "1.5px solid gray", borderRadius: "10px" }}
         className={style.SearchBox__Dropdowns}
       >
-        <Modal isOpen={isOpen} onClose={onClose}>
+        <Modal isOpen={isOpen} onClose={onClose} >
           <ModalOverlay />
           <ModalContent>
             <ModalHeader>Select Your City</ModalHeader>
@@ -177,8 +177,10 @@ function SearchBox() {
                     listStyle: "none",
                     cursor: "pointer",
                     marginTop: "20px",
-                    width: "400px",
+                    paddingLeft:"10px",
+                    width: "420px",
                     height: "35px",
+                    borderRadius:"10px",
                     backgroundColor: "rgba(231, 231, 231, 0.906)",
                   }}
                   key={option.value}
@@ -202,10 +204,11 @@ function SearchBox() {
             display: "flex",
             backgroundColor: "rgba(231, 231, 231, 0.79)",
             borderBottom: "1px solid black",
+      
           }}
         >
           <span
-            style={{ paddingTop: "12px" }}
+            style={{ paddingTop: "12px"}}
             class="material-symbols-outlined"
           >
             fmd_bad
@@ -215,9 +218,8 @@ function SearchBox() {
             style={{
               width: "100%",
               height: "50px",
-              // borderBottom: "1px solid black",
               justifyContent: "flex-start",
-              borderRadius: 0,
+              borderRadius: "12px",
             }}
           >
             {city}
