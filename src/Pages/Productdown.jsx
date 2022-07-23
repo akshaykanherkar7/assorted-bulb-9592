@@ -2,7 +2,7 @@ import React from 'react'
 import {Box,Heading,Text,Link,Image,Flex} from "@chakra-ui/react";
 import Faqsfooter from "./Faqsfooter"
 import styles from "./Faqsfooter.module.css";
-
+// import Serviceable from "./Serviceable";
 const Productdown = () => {
   return (
     <Box>
@@ -18,6 +18,7 @@ const Productdown = () => {
     <Box fontSize="12px" color='#7f868e' >Hatchback | Sedan | SUV | MUV</Box><br/>
     </Box>  
     
+    {/* <Serviceable/> */}
    {/* Footer  */}
 
    <Box className={styles.faqcontainer}>
@@ -69,6 +70,7 @@ const Productdown = () => {
    
 </Box>
 </Box>
+   
    {/* footer-end */}
     <Box ml="200px" mr="200px">
     <Heading as='h4' size='sm'>Car Rental in Bangalore starting from INR 41 per Hour</Heading><br/>

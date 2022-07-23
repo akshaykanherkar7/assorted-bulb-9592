@@ -50,6 +50,7 @@ const HappyC = () => {
       <Flex>
         <Box p="4" >
           <Text
+          overflow={"hidden"}
             fontSize="3xl"
             fontFamily="Poppins"
             color="rgba(152, 166, 179, 0.81)"
@@ -73,7 +74,7 @@ const HappyC = () => {
         <Box  height="325px" width='90%'borderRadius='12px'  >
         <Box  height="325px" width='90%' borderRadius='12px'>
         <Box width="100%" bg='white'borderRadius='12px' height='100%' boxShadow='rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;' >
-              <Heading bg='white'
+              <Heading overflow={"hidden"} bg='white'
                 as='h2' size='2xl'
                 fontWeight="600"
                 lineHeight="24px"
@@ -83,7 +84,7 @@ const HappyC = () => {
               >
                 Prateek Srivastava
               </Heading>
-              <Text bg='white'
+              <Text overflow={"hidden"} bg='white'
                 width="80%"
                 lineHeight="2"
                 margin="4px 0px 8px 8px"
@@ -99,7 +100,7 @@ const HappyC = () => {
         <Box borderRadius='12px'height="325px" width='90%' >
         <Box borderRadius='12px'  height="325px" width='90%' >
         <Box borderRadius='12px' width="100%" bg='white' height='100%' boxShadow='rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;'>
-              <Heading bg='white'
+              <Heading overflow={"hidden"} bg='white'
               justifyContent='center'
                as='h2' size='2xl'
                 fontWeight="600"
@@ -111,6 +112,7 @@ const HappyC = () => {
                 Roshan Raval
               </Heading>
               <Text bg='white'
+              overflow={"hidden"}
                 width="80%"
                 lineHeight="2"
                 margin="4px 0px 8px 8px"
@@ -126,7 +128,7 @@ const HappyC = () => {
         <Box borderRadius='12px'  height="325px" width='90%' >
         <Box borderRadius='12px' height="325px" width='90%' >
         <Box borderRadius='12px' width="100%" bg='white' height='100%' boxShadow='rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;'>
-              <Heading bg='white'
+              <Heading overflow={"hidden"} bg='white'
                as='h2' size='2xl'
                 fontWeight="600"
                 lineHeight="24px"
@@ -136,7 +138,7 @@ const HappyC = () => {
               >
                 Sanjib Sarkar
               </Heading>
-              <Text bg='white'
+              <Text overflow={"hidden"} bg='white'
                 width="80%"
                 lineHeight="2"
                 margin="4px 0px 8px 8px"
@@ -152,7 +154,7 @@ const HappyC = () => {
         <Box borderRadius='12px'  height="325px" width='90%' >
         <Box borderRadius='12px' height="325px" width='90%' >
         <Box borderRadius='12px' width="100%" bg='white' height='100%' boxShadow='rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;' >
-              <Heading bg='white'
+              <Heading overflow={"hidden"} bg='white'
                as='h2' size='2xl'
                 fontWeight="600"
                 lineHeight="24px"
@@ -162,7 +164,7 @@ const HappyC = () => {
               >
                 Arijit Sarkar
               </Heading>
-              <Text bg='white'
+              <Text overflow={"hidden"} bg='white'
                 width="80%"
                 lineHeight="2"
                 margin="4px 0px 8px 8px"
@@ -178,7 +180,7 @@ const HappyC = () => {
         <Box borderRadius='12px' height="325px" width='90%' >
         <Box borderRadius='12px'  height="325px" width='90%' >
         <Box borderRadius='12px' width="100%" bg='white' height='100%' boxShadow='rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;' >
-              <Heading bg='white'
+              <Heading overflow={"hidden"} bg='white'
                as='h2' size='2xl'
                 fontWeight="600"
                 lineHeight="24px"
@@ -188,7 +190,7 @@ const HappyC = () => {
               >
                Vijay S
               </Heading>
-              <Text bg='white'
+              <Text overflow={"hidden"} bg='white'
                 width="80%"
                 lineHeight="2"
                 margin="4px 0px 8px 8px"
@@ -204,7 +206,7 @@ const HappyC = () => {
         <Box borderRadius='12px'  height="325px"width='90%' >
         <Box borderRadius='12px' height="325px" width='90%' >
         <Box borderRadius='12px' width="100%" bg='white' height='100%' boxShadow='rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;'>
-              <Heading bg='white'
+              <Heading overflow={"hidden"} bg='white'
                as='h2' size='2xl'
                 fontWeight="600"
                 lineHeight="24px"
@@ -214,7 +216,7 @@ const HappyC = () => {
               >
                 Rohit Ray
               </Heading>
-              <Text bg='white'
+              <Text overflow={"hidden"} bg='white'
                 width="80%"
                 lineHeight="2"
                 margin="4px 0px 8px 8px"
@@ -230,7 +232,7 @@ const HappyC = () => {
         <Box borderRadius='12px' height="325px" width='90%' >
         <Box borderRadius='12px'  height="325px" width='90%' >
         <Box borderRadius='12px' width="100%" bg='white' height='100%'  boxShadow='rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;'>
-              <Heading bg='white'
+              <Heading overflow={"hidden"} bg='white'
                as='h2' size='2xl'
                 fontWeight="600"
                 lineHeight="24px"
@@ -240,7 +242,7 @@ const HappyC = () => {
               >
                Sanjeev Rawat
               </Heading>
-              <Text bg='white'
+              <Text overflow={"hidden"} bg='white'
                 width="80%"
                 lineHeight="2"
                 margin="4px 0px 8px 8px"
