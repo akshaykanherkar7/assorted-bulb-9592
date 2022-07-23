@@ -50,7 +50,7 @@ const HappyC = () => {
       <Flex>
         <Box p="4" >
           <Text
-          overflow='scroll'
+          
             fontSize="3xl"
             fontFamily="Poppins"
             color="rgba(152, 166, 179, 0.81)"
