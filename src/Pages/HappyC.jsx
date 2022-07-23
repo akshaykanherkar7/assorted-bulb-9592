@@ -154,7 +154,7 @@ const HappyC = () => {
         </Box>
         <Box borderRadius='12px'  height="325px" width='90%' >
         <Box borderRadius='12px' height="325px" width='90%' >
-        <Box borderRadius='12px' width="100%" bg='white' height='100%' boxShadow='rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;' >
+        <Box borderRadius='12px' width="100%" bg='white' height='90%' boxShadow='rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;' >
               <Heading overflow={"hidden"} bg='white'
                as='h2' size='2xl'
                 fontWeight="600"
@@ -180,7 +180,7 @@ const HappyC = () => {
         </Box>
         <Box borderRadius='12px' height="325px" width='90%' >
         <Box borderRadius='12px'  height="325px" width='90%' >
-        <Box borderRadius='12px' width="100%" bg='white' height='100%' boxShadow='rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;' >
+        <Box borderRadius='12px' width="100%" bg='white' height='90%' boxShadow='rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;' >
               <Heading overflow={"hidden"} bg='white'
                as='h2' size='2xl'
                 fontWeight="600"
@@ -206,7 +206,7 @@ const HappyC = () => {
         </Box>
         <Box borderRadius='12px'  height="325px"width='90%' >
         <Box borderRadius='12px' height="325px" width='90%' >
-        <Box borderRadius='12px' width="100%" bg='white' height='100%' boxShadow='rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;'>
+        <Box borderRadius='12px' width="100%" bg='white' height='90%' boxShadow='rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;'>
               <Heading overflow={"hidden"} bg='white'
                as='h2' size='2xl'
                 fontWeight="600"
@@ -232,7 +232,7 @@ const HappyC = () => {
         </Box>
         <Box borderRadius='12px' height="325px" width='90%' >
         <Box borderRadius='12px'  height="325px" width='90%' >
-        <Box borderRadius='12px' width="100%" bg='white' height='100%'  boxShadow='rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;'>
+        <Box borderRadius='12px' width="100%" bg='white' height='90%'  boxShadow='rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;'>
               <Heading overflow={"hidden"} bg='white'
                as='h2' size='2xl'
                 fontWeight="600"
