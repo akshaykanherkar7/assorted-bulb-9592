@@ -91,7 +91,7 @@ const HappyC = () => {
                 margin="4px 0px 8px 8px"
                 color="rgba(18, 34, 50, 0.7)"
                 fontFamily="Poppins"
-                fontSize="16px" p='2'
+                fontSize="16px"  ml='2'
               >
                 Nice service with on time pickup and delivery. Good customer support with friendly and very helpful staff. 
               </Text>
@@ -145,7 +145,7 @@ const HappyC = () => {
                 margin="4px 0px 8px 8px"
                 color="rgba(18, 34, 50, 0.7)"
                 fontFamily="Poppins"
-                fontSize="16px"
+                fontSize="16px" ml='2'
               >
                 Very good service. I could not expect that I can get a car at 4.30 in the morning. Even they have paid for fuel which I filled more. Very transparent ❤️
               </Text>
@@ -161,7 +161,7 @@ const HappyC = () => {
                 lineHeight="24px"
                 margin="8px 0px 8px 8px"
                 fontFamily="Poppins"
-                fontSize="18px"
+                fontSize="18px" p='2'
               >
                 Arijit Sarkar
               </Heading>
@@ -171,7 +171,7 @@ const HappyC = () => {
                 margin="4px 0px 8px 8px"
                 color="rgba(18, 34, 50, 0.7)"
                 fontFamily="Poppins"
-                fontSize="16px"
+                fontSize="16px" ml='2'
               >
                 Sanitized car was provided. The delivery and pickup boy was very polite and helpful. This company is honest with their customers
               </Text>
@@ -187,7 +187,7 @@ const HappyC = () => {
                 lineHeight="24px"
                 margin="8px 0px 8px 8px"
                 fontFamily="Poppins"
-                fontSize="18px"
+                fontSize="18px" p='2'
               >
                Vijay S
               </Heading>
@@ -197,8 +197,8 @@ const HappyC = () => {
                 margin="4px 0px 8px 8px"
                 color="rgba(18, 34, 50, 0.7)"
                 fontFamily="Poppins"
-                fontSize="16px"
-              >
+                fontSize="16px" ml='2'
+              > 
                Booked for 4 days for a family trip. I strongly recommend Revv. Looking forward to using Revv car again
               </Text>
             </Box>
@@ -213,7 +213,7 @@ const HappyC = () => {
                 lineHeight="24px"
                 margin="8px 0px 8px 8px"
                 fontFamily="Poppins"
-                fontSize="18px"
+                fontSize="18px" p='2'
               >
                 Rohit Ray
               </Heading>
@@ -223,7 +223,7 @@ const HappyC = () => {
                 margin="4px 0px 8px 8px"
                 color="rgba(18, 34, 50, 0.7)"
                 fontFamily="Poppins"
-                fontSize="16px"
+                fontSize="16px" ml='2'
               >
                 The app is as user friendly as the policies. The process is as easy as nursury rhyme. Nicely maintaied cars
               </Text>
@@ -239,7 +239,7 @@ const HappyC = () => {
                 lineHeight="24px"
                 margin="8px 0px 8px 8px"
                 fontFamily="Poppins"
-                fontSize="18px"
+                fontSize="18px" p='2'
               >
                Sanjeev Rawat
               </Heading>
@@ -249,7 +249,7 @@ const HappyC = () => {
                 margin="4px 0px 8px 8px"
                 color="rgba(18, 34, 50, 0.7)"
                 fontFamily="Poppins"
-                fontSize="16px"
+                fontSize="16px" ml='2'
               >
                 Booked one during new year time, for an outstation trip. Were really happy with the clean, sanitized, mileage friendly, and well maintained car. 
               </Text>
