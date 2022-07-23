@@ -21,20 +21,20 @@ const HappyC = () => {
         {
           breakpoint: '1024px',
           settings: {
+            slidesToShow: 4,
+            
+            
+          }
+        },
+        {
+          breakpoint: 800,
+          settings: {
             slidesToShow: 2,
             
-            
           }
         },
         {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 1,
-            
-          }
-        },
-        {
-          breakpoint: 400,
+          breakpoint: 300,
           settings: {
             slidesToShow: 1,
             
@@ -50,7 +50,7 @@ const HappyC = () => {
       <Flex>
         <Box p="4" >
           <Text
-          overflow={"hidden"}
+          overflow='scroll'
             fontSize="3xl"
             fontFamily="Poppins"
             color="rgba(152, 166, 179, 0.81)"
@@ -81,18 +81,19 @@ const HappyC = () => {
                 margin="8px 0px 8px 8px"
                 fontFamily="Poppins"
                 fontSize="18px"
+                p='2'
               >
                 Prateek Srivastava
               </Heading>
-              <Text overflow={"hidden"} bg='white'
+              <Text  overflow='scroll' bg='white'
                 width="80%"
                 lineHeight="2"
                 margin="4px 0px 8px 8px"
                 color="rgba(18, 34, 50, 0.7)"
                 fontFamily="Poppins"
-                fontSize="16px"
+                fontSize="16px" p='2'
               >
-                Nice service with on time pickup and delivery. Good customer support with friendly and very helpful staff. The car was also very smooth and the packages are pocket friendly. Overall an amazing experience. Would highly recommend😄
+                Nice service with on time pickup and delivery. Good customer support with friendly and very helpful staff. 
               </Text>
             </Box>
           </Box>
@@ -107,7 +108,7 @@ const HappyC = () => {
                 lineHeight="24px"
                 margin="8px 0px 8px 8px"
                 fontFamily="Poppins"
-                fontSize="18px"
+                fontSize="18px" p='2'
               >
                 Roshan Raval
               </Heading>
@@ -118,7 +119,7 @@ const HappyC = () => {
                 margin="4px 0px 8px 8px"
                 color="rgba(18, 34, 50, 0.7)"
                 fontFamily="Poppins"
-                fontSize="16px"
+                fontSize="16px" ml='2'
               >
                 The car delivery was done on time and we were satisfied with the entire booking entire experience. We also got instant refund and the overall service was Revv
               </Text>
@@ -134,7 +135,7 @@ const HappyC = () => {
                 lineHeight="24px"
                 margin="12px 12px 12px 12px"
                 fontFamily="Poppins"
-                fontSize="18px"
+                fontSize="18px" p='2'
               >
                 Sanjib Sarkar
               </Heading>
@@ -198,7 +199,7 @@ const HappyC = () => {
                 fontFamily="Poppins"
                 fontSize="16px"
               >
-               Booked for 4 days for a family trip. Car was water washed and sanitized when I recieved it. Trip and the process were very comfortable and hassle-free. Best self-drive car service provider. I strongly recommend Revv. Looking forward to using Revv car again
+               Booked for 4 days for a family trip. I strongly recommend Revv. Looking forward to using Revv car again
               </Text>
             </Box>
           </Box>
@@ -250,7 +251,7 @@ const HappyC = () => {
                 fontFamily="Poppins"
                 fontSize="16px"
               >
-                Booked one during new year time, for an outstation trip. Were really happy with the clean, sanitized, mileage friendly, and well maintained car. All papers were intact which saved us from any hassles from traffic or border- post related checks
+                Booked one during new year time, for an outstation trip. Were really happy with the clean, sanitized, mileage friendly, and well maintained car. 
               </Text>
             </Box>
           </Box>
