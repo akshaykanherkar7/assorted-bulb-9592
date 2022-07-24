@@ -9,6 +9,7 @@ import Faqs from "./Faqs";
 import MyProfile from "./MyProfile";
 import Payment from "./Payment";
 import Product from "./Product";
+import Subscription from "./Subscription";
 import Success from "./Success";
 import Upi from "./Upi";
 
@@ -31,6 +32,7 @@ const MainRoutes = () => {
         <Route path="/payment" element={<Payment />}></Route>
         <Route path="/upi" element={<Upi />}></Route>
         <Route path="/success" element={<Success />}></Route>
+        <Route path="/subscription" element={<Subscription />}></Route>
         <Route path="/faq" element={<Faqs/>}></Route>
       </Routes>
     </div>
