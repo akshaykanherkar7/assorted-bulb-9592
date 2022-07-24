@@ -105,7 +105,7 @@ const SignUp = () => {
       })
       .then((res) => {
         if (res === REGISTER_SUCCESS) {
-          navigate("/"); 
+          navigate("/");
         }
       });
     toast({
@@ -114,7 +114,6 @@ const SignUp = () => {
       duration: 3000,
       isClosable: true,
     });
-    navigate("/login");
     onClose();
   };
 
@@ -273,14 +272,14 @@ const SignUp = () => {
                     <Stack pt={6}>
                       <Text align={"center"}>
                         Already a user?{" "}
-                        <RouterLink
+                        {/* <RouterLink
                           to="/login"
                           color={"blue.400"}
                           onClick={onClose}
                           style={{ color: "blue" }}
-                        >
-                          Login
-                        </RouterLink>
+                        > */}
+                        Login
+                        {/* </RouterLink> */}
                       </Text>
                     </Stack>
                   </Stack>

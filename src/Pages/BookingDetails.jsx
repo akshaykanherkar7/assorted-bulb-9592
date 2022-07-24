@@ -1,5 +1,5 @@
-import React from "react";
-import { Text } from "@chakra-ui/react";
+import React, { useEffect } from "react";
+import { Button, Text } from "@chakra-ui/react";
 import {
   Flex,
   Box,
@@ -17,6 +17,7 @@ import Navbar from "../Components/Navbar";
 import { useDispatch, useSelector } from "react-redux";
 import { logOutAPI } from "../Redux/AuthReducer/auth.action";
 import { useNavigate } from "react-router-dom";
+import { deleteBookingData, getBookingData } from "../Redux/Dashboard/action";
 
 const BookingDetails = () => {
   const user = JSON.parse(localStorage.getItem("LoginData"));
@@ -27,12 +28,24 @@ const BookingDetails = () => {
     navigate("/");
   };
 
-  const carDetail = JSON.parse(localStorage.getItem("CarProduct"));
-  const { start_date, end_date, city } = useSelector(
-    (state) => state.dashboard
-  );
+  // const carDetail = JSON.parse(localStorage.getItem("CarProduct"));
+  // const { start_date, end_date, city } = useSelector(
+  //   (state) => state.dashboard
+  // );
+  const { booking } = useSelector((state) => state.dashboard);
+  console.log("booking:", booking);
 
   const duration = localStorage.getItem("duration");
+
+  useEffect(() => {
+    dispatch(getBookingData());
+  }, [dispatch]);
+
+  const handleRemove = (id) => {
+    dispatch(deleteBookingData(id)).then((res) => {
+      dispatch(getBookingData());
+    });
+  };
   return (
     <div>
       <Navbar></Navbar>
@@ -117,14 +130,23 @@ const BookingDetails = () => {
                 </Tr>
               </Thead>
               <Tbody>
-                <Tr>
-                  <Td>{carDetail.title}</Td>
-                  <Td>{Math.floor(Math.random(0) * 100)}</Td>
-                  <Td>{start_date}</Td>
-                  <Td>{end_date}</Td>
-                  <Td>{duration}</Td>
-                  <Td>{city}</Td>
-                </Tr>
+                {booking.length > 0 &&
+                  booking.map((el) => (
+                    <Tr key={el.id}>
+                      <Td>{el.title}</Td>
+                      <Td>{el.id}</Td>
+                      <Td>{el.start_date}</Td>
+                      <Td>{el.end_date}</Td>
+                      <Td>{el.duration}</Td>
+                      <Td>{el.city}</Td>
+                      <Button
+                        onClick={() => handleRemove(el.id)}
+                        colorScheme={"teal"}
+                      >
+                        Remove
+                      </Button>
+                    </Tr>
+                  ))}
               </Tbody>
             </Table>
           </TableContainer>
