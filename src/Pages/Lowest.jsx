@@ -24,7 +24,7 @@ const Lowest = () => {
           </Text>
         </Box>
         <Box>
-          <ul>
+          <ul className={styles.ul}>
             Car subscription from Revv provides the flexibility of having a car
             anytime you want, as well as the assurance of a sanitized and virus
             free vehicle for your own self drive. The car sanitization process
@@ -32,16 +32,16 @@ const Lowest = () => {
             the World Health Organization (WHO) and is diligently conducted for
             each vehicle delivered to the car subscribers. The safety measures
             that are implemented consist of:
-            <li>
+            <li className={styles.li}>>
               Industrial standards sanitization and disinfection before delivery
               for all surfaces of the vehicle
             </li>
-            <li>
+            <li className={styles.li}>>
               Drivers wear Personal Protective Equipment (PPE) including masks
               and gloves while delivering the cars
             </li>
-            <li>Paperless agreements for minimum contact</li>
-            <li>Upon return, digital receipt sent to the customer’s e-mail.</li>
+            <li className={styles.li}>>Paperless agreements for minimum contact</li>
+            <li className={styles.li}>>Upon return, digital receipt sent to the customer’s e-mail.</li>
           </ul>
         </Box>
         <Box p="4">
@@ -56,7 +56,7 @@ const Lowest = () => {
           </Text>
         </Box>
         <Box>
-          <ul>
+          <ul className={styles.ul}>
             Whether you’re planning a road trip outside the city or looking for
             a convenient way to cruise around when you’re out of town, Revv is
             here to ease your travel woes. You can pick one of Revv’s convenient
@@ -78,7 +78,7 @@ const Lowest = () => {
           </Text>
         </Box>
         <Box>
-          <ul>
+          <ul className={styles.ul}>
             With Revv, you can rent a car at a time that is convenient to you
             and get it delivered right to your doorstep. Apart from an hourly
             rate starting at just Rs. 33/hour, Revv also offers flexible car
@@ -102,22 +102,22 @@ const Lowest = () => {
           </Text>
         </Box>
         <Box>
-          <ul>
+          <ul className={styles.ul}>
             When you choose a car subscription with Revv, you can enjoy:
-            <li>
+            <li className={styles.li}>
               Flexible Rentals – You decide whether you’d like to rent a car for
               an hour, a week, a month, or on a daily basis.
             </li>
-            <li>
+            <li className={styles.li}>
               Several Options – Pick from our wide range of classy hatchbacks,
               comfortable sedans and spacious SUVs.
             </li>
-            <li>
+            <li className={styles.li}>
               All-India Permits – Revv cars come with an All India Tourist
               Permit, so you can drive from Kashmir to Kanyakumari without any
               worries.
             </li>
-            <li>
+            <li className={styles.li}>
               Unending Opportunities – The cars you rent from Revv can be used
               for trips out of the city or for daily travels through town. Revv
               also provides cars for pick up and drop off services at airports
@@ -138,7 +138,7 @@ const Lowest = () => {
           </Text>
         </Box>
         <Box>
-          <ul>
+          <ul className={styles.ul}>
             Revv has an amazing fleet of rental cars ranging from compact
             hatchbacks to roomy sedans and powerful SUVs. You can choose to hire
             a Hyundai Grand i10, Hyundai Creta, Honda City, Maruti Suzuki
@@ -158,7 +158,7 @@ const Lowest = () => {
           </Text>
         </Box>
         <Box>
-          <ul>
+          <ul className={styles.ul}>
             Currently, you can rent a self-driving car from Revv in Ahmedabad,
             Bengaluru, Chandigarh, Chennai, Coimbatore, Delhi NCR, Hyderabad,
             Jaipur, Kochi, Kolkata, Mangalore, Mumbai, Mysuru, Pune, Surat,
@@ -178,34 +178,34 @@ const Lowest = () => {
           </Text>
         </Box>
         <Box>
-          <ul>
+          <ul className={styles.ul}>
             To rent one of our sanitized cars, you can follow these simple
             steps:
-            <li>
+            <li className={styles.li}>
               Download the Revv app from the Apple App Store or Google Play
               Store
             </li>
-            <li>
+            <li className={styles.li}>
               Pick your favourite car and let us know when and where you need
               it.
             </li>
-            <li>
+            <li className={styles.li}>
               The car will be delivered to your doorstep at the date and time
               promised.
             </li>
-            <li>
+            <li className={styles.li}>
               Start the engine and enjoy your road trip without worrying about
               the kilometres.
             </li>
-            <li>
+            <li className={styles.li}>
               Let us know where we need to pick up the car from once you’re
               done.
             </li>
-            <li>
+            <li className={styles.li}>
               You’ll receive an invoice in your email 48 hours after your trip
               is completed.
             </li>
-            <li>Use the app to reschedule or cancel bookings as required.</li>
+            <li className={styles.li}>Use the app to reschedule or cancel bookings as required.</li>
           </ul>
         </Box>
       </Box>

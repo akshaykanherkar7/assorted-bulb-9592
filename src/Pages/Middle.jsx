@@ -4,6 +4,7 @@ import Download from "./Download";
 import Faqsfooter from "./Faqsfooter";
 import Features from "./Features";
 import Footer from "./Footer";
+import Fqa from "./Fqa";
 import HappyC from "./HappyC";
 import Investor from "./Investor";
 import Lowest from "./Lowest";
@@ -19,6 +20,7 @@ const Middle = () => {
         <Features />
         <Sanitizer />
         <Why />
+        <Fqa/>
         <HappyC />
         <Download />
         <Day3 />

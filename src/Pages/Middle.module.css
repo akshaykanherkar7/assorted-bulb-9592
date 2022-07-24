@@ -42,14 +42,14 @@ li::marker{
     color: 
     #9cd6d6;
 }
-li{
+.li{
     list-style-position: inside;
     line-height: 30px;
     font-size: 14px;
     color: #5d5e6f;
     text-align: justify;
 }
-ul{
+.ul{
     line-height: 30px;
     font-size: 16px;
     color: #5d5e6f;
