@@ -49,6 +49,10 @@ const Navbar = () => {
   const handleFAQ = () => {
     navigate("/faq");
   };
+
+  const handleSubc = () => {
+    navigate("/subscription");
+  };
   return (
     <div>
       <div className={styles.mainDiv}>
@@ -63,11 +67,11 @@ const Navbar = () => {
           </div>
         </div>
         <div className={styles.div2}>
-          <div className={styles.innerDiv1}>
+          <div className={styles.innerDiv1} onClick={handleSubc}>
             <p style={{ fontWeight: "bold", fontSize: "17px" }}>Hyundai</p>
             <p style={{ marginLeft: "5px", fontSize: "14px" }}>Subscription</p>
           </div>
-          <div className={styles.innerDiv1}>
+          <div className={styles.innerDiv1} onClick={handleSubc}>
             <p style={{ fontWeight: "bold", fontSize: "17px" }}>Mahindra</p>
             <p style={{ marginLeft: "5px", fontSize: "14px" }}>Subscription</p>
           </div>
