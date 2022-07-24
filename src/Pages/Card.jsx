@@ -10,25 +10,14 @@ import {Box,
 } from '@chakra-ui/react'
 
 import {
-
-  
     FormControl,
     FormLabel,
     Input,
     InputGroup,
     HStack,
- 
     Stack,
     Button,
-
     useColorModeValue,
-    Alert,
-    AlertIcon,
-    AlertDescription,
-    AlertTitle,
-   
-
-
   } from '@chakra-ui/react';
 
   
@@ -40,15 +29,20 @@ import { useNavigate } from 'react-router-dom';
 import {Link as RouterLink} from 'react-router-dom' ;
 
 const Card = () => {
- 
 
  
+ 
   const navigate = useNavigate();
+
+  const handleEmi = ()=>{
+   navigate("/upi")
+  }
+  
   const handleFormSubmit = (e) => {
     e.preventDefault();
       // alert("Order Placed");
     
-      navigate("/success");
+      navigate("/sucess");
   }
 
 
@@ -272,8 +266,11 @@ const Card = () => {
         <Box  className={styled.upiDropDown} flex='1' textAlign='left'>
         <Box> <img   height={'50px'} width='50%' src="https://www.revv.co.in/imgs/payment/web_emi.png" alt="" /></Box>
         <Box marginLeft={'-88%'}>  <b><h2>EMI</h2> </b></Box>
-        <AccordionIcon color={"#0EBABA"}  />
+        <div onClick={handleEmi}> <AccordionIcon color={"#0EBABA"} / ></div>
+     
+        
         </Box>
+      
       </AccordionButton>
     </h2>
   </AccordionItem>
@@ -287,7 +284,7 @@ const Card = () => {
         <Box  className={styled.upiDropDown} flex='1' textAlign='left'>
         <Box> <img height={'50px'} width='50%' src="https://www.revv.co.in/imgs/payment/web_amazonpay.png" alt="" /></Box>
        
-        <Box  color={"#0EBABA"} >Link Account</Box>
+        <Box  color={"#0EBABA"} > <a href="https://na.account.amazon.com/ap/oa?client_id=undefined&redirect_uri=https%3A%2F%2Fna.account.amazon.com%2Fsdk%2F2021-11-10-q2hs19vd%2Ftopic.html%3Furi%3Dhttps%253A%252F%252Fwww.revv.co.in%252Fcar-rental%252Fhyderabad%252Fmake-payment%26proxy%3Damazon-proxy-https-na_account_amazon_com%26topic%3Dw6Y8EYSsTF9rNcb0%26version%3D3&response_type=code&language=&ui_locales=&scope=payments%3A%3Aconduct_silentpay">Link Account</a></Box>
         </Box>
       </AccordionButton>
     </h2>

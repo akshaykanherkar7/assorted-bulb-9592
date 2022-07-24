@@ -5,6 +5,7 @@ import Navbar from "../Components/Navbar";
 import ReqAuth from "../Hoc/ReqAuth";
 import BookingDetails from "./BookingDetails";
 import CarBooking from "./CarBooking";
+import Faqs from "./Faqs";
 import MyProfile from "./MyProfile";
 import Payment from "./Payment";
 import Product from "./Product";
@@ -32,6 +33,7 @@ const MainRoutes = () => {
         <Route path="/upi" element={<Upi />}></Route>
         <Route path="/success" element={<Success />}></Route>
         <Route path="/subscription" element={<Subscription />}></Route>
+        <Route path="/faq" element={<Faqs/>}></Route>
       </Routes>
     </div>
   );

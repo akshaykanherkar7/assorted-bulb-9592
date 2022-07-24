@@ -64,17 +64,18 @@ const Why = () => {
       </Flex>
 
       <Slider ref={setSliderRef} {...sliderSettings} height="100%" width="100%" borderRadius='12px' overFlow='hidden'>
-        <Box
-         boxShadow='rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px'
-         borderRadius='12px'
-          marginLeft='10px'
-          backgroundColor="white"
-          bg="white"
+    
+      
+      <Box
+       
+        
+         
+          marginRight='20px'
           height="105px"
           width="100%"
         >
-          <Flex  borderRadius='12px' height={'100%'} >
-            <Box width="30%" bg='white' height='100%' borderRadius='12px' >
+          <Flex  borderRadius='12px' height={'100%'} width='95%' >
+            <Box width="30%" bg='white' height='100%' borderRadius='12px 0px 0px 12px'  >
               <img
                 className={styles.imageShra12}
                 src="https://www.revv.co.in/assets/RentalImages/HomeScreen/rental2021/whyRevv/home.png"
@@ -82,19 +83,21 @@ const Why = () => {
               />
             </Box>
 
-            <Box width="70%" bg='white' overflow='hidden' height='100%' >
+            <Box width="90%" bg='white' overflow='hidden' height='100%'  borderRadius='0px 12px 12px 0px' >
               <Heading bg='white'
                 as="h4"
                 size="3xl"
+                width='80%'
                 fontWeight="600"
                 lineHeight="24px"
                 margin="8px 0px 8px 8px"
                 fontFamily="Poppins"
                 fontSize="18px"
+               
               >
                 Home delivery & return
               </Heading>
-              <Text bg='white'
+              <Text 
                 width="80%"
                 lineHeight="1.43"
                 margin="4px 0px 8px 8px"
@@ -107,9 +110,9 @@ const Why = () => {
             </Box>
           </Flex>
         </Box>
-        <Box  boxShadow='rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px' height="105px" width="90%" bg="white" borderRadius='12px' marginLeft='10px'>
-          <Flex height='100%'>
-            <Box borderRadius='12px' width="30%" bg='white' height='100%'>
+        <Box   height="105px" width="90%" borderRadius='12px' marginRight='20px'>
+          <Flex height='100%' width='95%' borderRadius='12px'>
+            <Box  borderRadius='12px 0px 0px 12px' width="30%" bg='white' height='100%'>
               <img
                 className={styles.imageShra12}
                 src="https://www.revv.co.in/assets/RentalImages/HomeScreen/rental2021/whyRevv/price.png"
@@ -117,7 +120,7 @@ const Why = () => {
               />
             </Box>
 
-            <Box width="70% " bg='white' height='100%'>
+            <Box width="70% " bg='white' height='100%' borderRadius='0px 12px 12px 0px'> 
               <Heading bg='white'
                 as="h4"
                 size="3xl"
@@ -142,9 +145,9 @@ const Why = () => {
             </Box>
           </Flex>
         </Box>
-        <Box height="105px" width="90%" bg="white" borderRadius='12px'  marginLeft='10px'  boxShadow='rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px'>
-          <Flex bg="white" borderRadius='12px' height='100%'>
-            <Box borderRadius='12px' height='100%' width="30%" bg='white'>
+        <Box  height="105px" width="90%" borderRadius='12px' marginRight='20px'>
+          <Flex width='95%' bg="white" borderRadius='12px' height='100%'>
+            <Box  borderRadius='12px 0px 0px 12px' height='100%' width="30%" bg='white'>
               <img
                 className={styles.imageShra12}
                 src="https://www.revv.co.in/assets/RentalImages/HomeScreen/rental2021/whyRevv/maintained.png"
@@ -152,7 +155,7 @@ const Why = () => {
               />
             </Box>
 
-            <Box width="70%" bg='white' height='100%'>
+            <Box width="70%" bg='white' height='100%' borderRadius='0px 12px 12px 0px'>
               <Heading
                 as="h4" bg='white'
                 size="3xl"
@@ -177,9 +180,9 @@ const Why = () => {
             </Box>
           </Flex>
         </Box>
-        <Box height="105px" width="90%" bg="white" borderRadius='12px'  marginLeft='10px'  boxShadow='rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px'>
-          <Flex bg="white" borderRadius='12px'height='100%'>
-            <Box borderRadius='12px' width="30%" bg='white' height='100%'> 
+        <Box  height="105px" width="90%" borderRadius='12px' marginRight='20px'>
+          <Flex width='95%' bg="white" borderRadius='12px'height='100%'>
+            <Box  borderRadius='12px 0px 0px 12px' width="30%" bg='white' height='100%'> 
               <img
                 className={styles.imageShra12}
                 src="https://www.revv.co.in/assets/RentalImages/HomeScreen/rental2021/whyRevv/contact.png"
@@ -187,7 +190,7 @@ const Why = () => {
               />
             </Box>
 
-            <Box width="70%" bg='white' height='100%'>
+            <Box width="70%" bg='white' height='100%' borderRadius='0px 12px 12px 0px'>
               <Heading bg='white'
                 as="h4"
                 size="3xl"
@@ -212,35 +215,8 @@ const Why = () => {
             </Box>
           </Flex>
         </Box>
-        {/* <Box  height="150px" width='100%'>
-          <img
-            className={styles.imageShra1}
-            src="https://revvselfdrivecar.s3-us-west-2.amazonaws.com/staging_images/banner_sanitised_01-min.jpg"
-            alt="aa"
-          />
-        </Box>
-        <Box  height="150px" width='100%'>
-          <img
-            className={styles.imageShra1}
-            src="https://revvselfdrivecar.s3-us-west-2.amazonaws.com/staging_images/banner_sanitised_02-min.jpg"
-            alt="aa"
-          />
-        </Box>
-        <Box  height="150px" width='100%'>
-          <img
-            className={styles.imageShra1}
-            src="https://revvselfdrivecar.s3-us-west-2.amazonaws.com/staging_images/banner_sanitised_03-min.jpg"
-            alt="aa"
-          />
-        </Box>
-        <Box  height="150px" width='100%'>
-          {" "}
-          <img
-            className={styles.imageShra1}
-            src="https://revvselfdrivecar.s3-us-west-2.amazonaws.com/staging_images/banner_sanitised_04-min.jpg"
-            alt="aa"
-          />
-        </Box> */}
+      
+        
       </Slider>
     </div>
   );

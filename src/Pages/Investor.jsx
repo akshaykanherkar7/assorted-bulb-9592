@@ -1,10 +1,10 @@
-import { Box, Center, Flex, Heading, Spacer, Text } from "@chakra-ui/react";
+import { Box, Center, Grid, SimpleGrid, Text } from "@chakra-ui/react";
 import React from "react";
 
 const Investor = () => {
   return (
-    <div style={{ width: "100%", height: "350px" }}>
-      <Box width="100%" height="90%" >
+    <div style={{ width: "100%",marginBottom:"50px" }}>
+      <Box width="100%">
         <Box p="4">
           <Text
             fontSize="3xl"
@@ -17,24 +17,36 @@ const Investor = () => {
         </Box>
         <Box
           width="100%"
-          height="230px"
+          // height="230px"
           margin="auto"
           backgroundColor="white"
           borderRadius="12px"
         >
-          <Flex width="100%" height="100%" backgroundColor="white"  flexWrap='wrap' boxSizing="border-box">
-            <Box width="25%" height="230px" backgroundColor="white">
-              <Box marginTop="40px" backgroundColor="white">
+          <Grid
+            templateColumns={{base:"repeat(1, 1fr)", md:"repeat(2, 1fr)", lg:"repeat(4, 1fr)"}}
+            width="100%"
+            //  height="100%"
+            backgroundColor="white"
+            margin={"auto"}
+          >
+            <Box width="45%" 
+            // height="230px" 
+            backgroundColor="white">
+              <Box
+                backgroundColor="white"
+                margin="50px 50px 20px 80px"
+                width="55%"
+              >
                 <Center backgroundColor="white">
                   <img
-                    style={{ width: "180px", height: "100px" }}
+                    style={{ width: "180px",height: "100px" }}
                     src="https://www.revv.co.in/assets/RentalImages/HomeScreen/rental2021/investors/hyundai.webp"
                     alt=""
                   />
                 </Center>
               </Box>
 
-              <Center backgroundColor="white" marginTop='20px'>
+              <Center backgroundColor="white" width="250px">
                 <Text
                   fontFamily='apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"'
                   line-height="1.43"
@@ -45,9 +57,13 @@ const Investor = () => {
                 </Text>
               </Center>
             </Box>
-          
-            <Box width="25%" height="100%" backgroundColor="white" >
-              <Box marginTop="40px" backgroundColor="white">
+
+            <Box width="45%" backgroundColor="white">
+              <Box
+                backgroundColor="white"
+                margin="50px 50px 20px 80px"
+                width="55%"
+              >
                 <Center backgroundColor="white">
                   <img
                     style={{ width: "180px", height: "100px" }}
@@ -57,7 +73,7 @@ const Investor = () => {
                 </Center>
               </Box>
 
-              <Center backgroundColor="white" marginTop='20px'>
+              <Center backgroundColor="white" width="250px">
                 <Text
                   fontFamily='apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"'
                   line-height="1.43"
@@ -68,19 +84,23 @@ const Investor = () => {
                 </Text>
               </Center>
             </Box>
-         
-            <Box width="25%" height="100%" backgroundColor="white">
-              <Box marginTop="40px" backgroundColor="white">
+
+            <Box width="45%"  backgroundColor="white">
+              <Box
+                backgroundColor="white"
+                margin="50px 50px 20px 80px"
+                width="55%"
+              >
                 <Center backgroundColor="white">
                   <img
-                    style={{ width: "180px", height: "100px" }}
+                    style={{ width: "180px" ,height: "100px"}}
                     src="https://www.revv.co.in/assets/RentalImages/HomeScreen/rental2021/investors/dreamIncubator.webp"
                     alt=""
                   />
                 </Center>
               </Box>
 
-              <Center backgroundColor="white" marginTop='20px'>
+              <Center backgroundColor="white" marginTop="20px" width="250px">
                 <Text
                   fontFamily='apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"'
                   line-height="1.43"
@@ -91,9 +111,13 @@ const Investor = () => {
                 </Text>
               </Center>
             </Box>
-            
-            <Box width="25%" height="100%" backgroundColor="white" >
-              <Box marginTop="40px" backgroundColor="white">
+
+            <Box width="45%" backgroundColor="white">
+              <Box
+                backgroundColor="white"
+                margin="50px 50px 20px 80px"
+                width="55%"
+              >
                 <Center backgroundColor="white">
                   <img
                     style={{ width: "180px", height: "100px" }}
@@ -103,7 +127,7 @@ const Investor = () => {
                 </Center>
               </Box>
 
-              <Center backgroundColor="white" marginTop='20px'>
+              <Center backgroundColor="white" marginTop="20px" width="250px">
                 <Text
                   fontFamily='apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"'
                   line-height="1.43"
@@ -114,8 +138,7 @@ const Investor = () => {
                 </Text>
               </Center>
             </Box>
-            
-          </Flex>
+          </Grid>
         </Box>
       </Box>
     </div>

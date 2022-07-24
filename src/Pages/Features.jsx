@@ -1,5 +1,15 @@
 import React, { useState } from "react";
-import { Box, SimpleGrid, Text } from "@chakra-ui/react";
+import { Box,
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+  Button,
+  useDisclosure,
+ SimpleGrid, Text, Input } from "@chakra-ui/react";
 import { Flex, Spacer } from "@chakra-ui/react";
 import { ChevronRightIcon, ChevronLeftIcon } from "@chakra-ui/icons";
 import styles from "./Middle.module.css";
@@ -11,6 +21,9 @@ import 'slick-carousel/slick/slick-theme.css'
 
 const Features = () => {
   const [sliderRef, setSliderRef] = useState(1);
+  const { isOpen, onOpen, onClose } = useDisclosure()
+
+
   const sliderSettings = 
     {
         arrows: false,
@@ -42,7 +55,6 @@ const Features = () => {
         }
         ]
     }
-      
 
 
   return (
@@ -71,21 +83,21 @@ const Features = () => {
 
       <Slider ref={setSliderRef} {...sliderSettings}height="100%" width="100%">
         <Box  height="180px" width='90%'>
-          <img
+          <img onClick={onOpen}
             className={styles.imageShra}
             src="https://revvselfdrivecar.s3.us-west-2.amazonaws.com/offers/Banner-Flat+500+off+blue.png"
             alt="aa"
           />
         </Box>
         <Box height="180px" width='90%'>
-          <img
+          <img onClick={onOpen}
             className={styles.imageShra}
             src="https://revvselfdrivecar.s3.us-west-2.amazonaws.com/10+days.png"
             alt="aa"
           />
         </Box>
         <Box  height="180px" width='90%'>
-          <img
+          <img onClick={onOpen}
             className={styles.imageShra}
             src="https://revvselfdrivecar.s3.us-west-2.amazonaws.com/5+days.png"
             alt="aa"
@@ -131,6 +143,32 @@ const Features = () => {
           />
         </Box>
       </Slider>
+      <Modal isOpen={isOpen} onClose={onClose}>
+      <ModalOverlay />
+      <ModalContent>
+        <ModalHeader>Flat Rs. 500 off</ModalHeader>
+        <ModalCloseButton/>
+        <ModalBody>
+          <Text>On all bookings above Rs 10,000</Text>
+          <Input type='text' placeholder="SUM500" />
+          <ul><b>Terms and Conditions</b>
+          <li>Applicable on rental bookings only</li>
+          <li>Applicable on minimum booking amount of Rs 10,000</li>
+          <li>Applicable on both with fuel & without fuel bookings</li>
+          </ul>
+        </ModalBody>
+
+        <ModalFooter>
+          <Button colorScheme='blue' mr={3} onClick={onClose}>
+            Close
+          </Button>
+          <Button variant='ghost'>Apply</Button>
+        </ModalFooter>
+      </ModalContent>
+    </Modal>
+ 
+   
+  
     </div>
   );
 };
