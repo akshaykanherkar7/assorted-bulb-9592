@@ -32,16 +32,16 @@ const Lowest = () => {
             the World Health Organization (WHO) and is diligently conducted for
             each vehicle delivered to the car subscribers. The safety measures
             that are implemented consist of:
-            <li className={styles.li}>>
+            <li className={styles.li}>
               Industrial standards sanitization and disinfection before delivery
               for all surfaces of the vehicle
             </li>
-            <li className={styles.li}>>
+            <li className={styles.li}>
               Drivers wear Personal Protective Equipment (PPE) including masks
               and gloves while delivering the cars
             </li>
-            <li className={styles.li}>>Paperless agreements for minimum contact</li>
-            <li className={styles.li}>>Upon return, digital receipt sent to the customer’s e-mail.</li>
+            <li className={styles.li}>Paperless agreements for minimum contact</li>
+            <li className={styles.li}>Upon return, digital receipt sent to the customer’s e-mail.</li>
           </ul>
         </Box>
         <Box p="4">
