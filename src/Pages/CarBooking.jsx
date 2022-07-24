@@ -11,22 +11,32 @@ import {
 } from "@chakra-ui/react";
 import { useNavigate } from "react-router-dom";
 import styled from "../style/Booking.module.css";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Navbar from "../Components/Navbar";
+import { postBookingData } from "../Redux/Dashboard/action";
 
 const CarBooking = () => {
   const carDetail = JSON.parse(localStorage.getItem("CarProduct"));
+  const duration = localStorage.getItem("duration");
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const { end_date, start_date, city } = useSelector(
     (state) => state.dashboard
   );
   const handlePayPage = () => {
+    const payload = {
+      title: carDetail.title,
+      city: city,
+      start_date: start_date,
+      end_date: end_date,
+      duration: duration,
+    };
     navigate("/payment");
+    dispatch(postBookingData(payload));
   };
 
   // localStorage.setItem("Total", carDetail.priceLabel3 + 400 + 2000);
   // main div
-  const duration = localStorage.getItem("duration");
 
   return (
     <div>
