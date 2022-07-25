@@ -118,11 +118,11 @@ const SignUp = () => {
   };
 
   const handleNavigate = () => {
-    navigate("/login");
+    onClose();
   };
   return (
     <div>
-      <Text color="blue" onClick={onOpen}>
+      <Text cursor={"pointer"} color="blue" onClick={onOpen}>
         SignUp
       </Text>
 
@@ -138,7 +138,7 @@ const SignUp = () => {
           <ModalHeader>
             <Center>SIGN UP</Center>
           </ModalHeader>
-          <ModalCloseButton onClick={handleNavigate} />
+          <ModalCloseButton />
           <ModalBody h="sm">
             <Flex
               align={"center"}
@@ -270,7 +270,7 @@ const SignUp = () => {
                       </Button>
                     </Stack>
                     <Stack pt={6}>
-                      <Text align={"center"}>
+                      <Text align={"center"} onClick={handleNavigate}>
                         Already a user?{" "}
                         {/* <RouterLink
                           to="/login"
@@ -278,7 +278,9 @@ const SignUp = () => {
                           onClick={onClose}
                           style={{ color: "blue" }}
                         > */}
-                        Login
+                        <label style={{ color: "blue", cursor: "pointer" }}>
+                          Login
+                        </label>
                         {/* </RouterLink> */}
                       </Text>
                     </Stack>
