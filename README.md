@@ -1,3 +1,53 @@
+# Masai School Construct Week Project
+
+Welcome, we're are team “assorted-bulb”, and this Readme contains detail about our project. We‘ve built a cloned website of Revv.co.in with some of its basic functionalities. This overall project was a part of our construct week at Masai School.
+
+
+## About Project
+Revv is India's best and most trusted Traveling facilities provider website which has helped millions of needies. Building this project has been a chellenging job and fun at the same time. This project is build using tech stacks like <br />
+
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB) ![Redux](https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white) ![Chakra](https://img.shields.io/badge/chakra-%234ED1C5.svg?style=for-the-badge&logo=chakraui&logoColor=white) ![NPM](https://img.shields.io/badge/NPM-%23000000.svg?style=for-the-badge&logo=npm&logoColor=white) ![CodeSandbox](https://img.shields.io/badge/Codesandbox-040404?style=for-the-badge&logo=codesandbox&logoColor=DBDBDB)
+
+
+## Pages & Features
+
+- Homepage: Basic UI with search for Cars attached to the below of navbar.
+- Cars Page: Integrated search filter with category filterization and pagination.
+- Sign-up & Sign-in Modal
+- Car Details page for each fundraiser
+- Payment Page
+- FAQ 
+- How it works page
+
+## Deployment Link
+
+https://assorted-bulb-9592.netlify.app/
+
+## 🔗 Team Members
+    1. Akshay Kanherkar - Leader
+[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://akshay-kanherkar.netlify.app)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/akshay-kanherkar-0178531b1/)
+    
+    2. Shradha Mishra
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/shradha-mishra-3b967914b/)
+    
+    3. Shweta Mishra
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/sangam-kumar-singh-77110b232/)
+    
+    4. Taruna Nangla
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/taruna-nangla-463a6a195/)
+    
+    5. Sharad Yadav
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/akvish/)
+
+## Feedback
+
+If you have any feedback, please reach out to us at our respective linkedin profiles mentioned above
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
