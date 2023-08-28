@@ -19,10 +19,6 @@ Revv is India's best and most trusted Traveling facilities provider website whic
 - FAQ 
 - How it works page
 
-## Deployment Link
-
-https://assorted-bulb-9592.netlify.app/
-
 ## 🔗 Team Members
     1. Akshay Kanherkar - Leader
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://akshay-kanherkar.netlify.app)
